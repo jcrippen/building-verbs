@@ -1,0 +1,815 @@
+%!TEX root = ../building-verbs.tex
+%%
+%% 1. Introduction.
+%%
+
+\resetexcnt
+\chapter{Arguments}\label{ch:args}
+
+\startcontents[chapters]
+\noindent\rule[0.5em]{\textwidth}{\heavyrulewidth}
+\printcontents[chapters]{}{1}{\setcounter{tocdepth}{2}}
+\noindent\rule{\textwidth}{\heavyrulewidth}
+\vspace{1\baselineskip}
+
+%\clearpage
+
+An \term{argument} of a verb is a grammatical unit that is required by a verb and that denotes an entity or location involved in the eventuality described by the verb. For the definitions of entity, location, and eventuality see chapter \ref{ch:intro} section \ref{sec:intro-ling-sem}. The subject and object of a verb are examples of arguments; they will be defined in detail in sections \ref{sec:args-obj} and \ref{sec:args-subj}. The term ‘argument’ in linguistics derives from its use in mathematics where it describes the input variables of functions. A mathematical function is a kind of relation between some elements in a domain and some other elements in a range (a.k.a.\ codomain), i.e.\ a relation between some inputs and some outputs. The output of a function – the elements of its range – depends predictably on variables that are given as input to the function – the elements of its domain. These input variables of the function’s domain are traditionally known as ‘arguments’ of the function. Thus a function $f(x, y) = x² + y$ is a function that takes two arguments $x$ and $y$ as its inputs and then outputs a value which is the square of $x$ with the addition of $y$. If we give $f$ the arguments $2$ for $x$ and $1$ for $y$ then the result is invariably $f(2, 1) = 2² + 1 = (2 × 2) + 1 = 5$. The output $5$ from the function $f$ therefore depends predictably on the arguments $x = 2$ and $y = 1$.
+
+A verb can be thought of as a kind of function that takes some inputs – its arguments – and provides an output which is a description of an eventuality. Thus the English verb ‘eat’ can be represented as a function $\text{\sm{eat}}(x, y)$ that describes an event where an entity $x$ consumes an entity $y$ as food. The output of the function $\text{\sm{eat}}$ depends on the arguments $x$ and $y$ in much the same way as a mathematical function: the eating ($\text{\sm{eat}}$) depends on who ($x$) eats what ($y$). Similarly, the English verb ‘put’ can be represented as a function $\text{\sm{put}}(x, y, z)$ that describes an event where an entity $x$ modifies the location of an entity $y$ so that it comes to be at a location $z$. The putting ($\sm{put}$) depends on who ($x$) puts what ($y$) where ($z$).
+
+There are four basic kinds of arguments in Tlingit: objects, subjects, obliques, and manners. We only discuss the first three kinds in this chapter, leaving manner arguments until chapter \ref{ch:argstr}. This chapter describes only the first three, leaving manner arguments until chapter \ref{ch:argstr}. All verbs require arguments, and we describe a verb as ‘taking’ an argument. The analogy is of a verb looking around in the sentence for something that satisfies its requirement for a particular kind of argument. Once found, the verb then takes this argument to assign it some role in the eventuality described by the verb.
+
+Different kinds of arguments are closely correlated with different kinds of thematic roles. A \term{thematic role} is a specific kind of involvement in an eventuality, describing the relationship that an entity or location has with the eventuality \parencites{blake:2001}{levin-rappaport-hovav:2005}{davis:2011a}. Two of the most typical thematic roles are ‘agent’ and ‘patient’. An \term{agent} is an entity that performs an eventuality in an intentional and controlled fashion. Generally the agent is the entity that is ‘in charge’ of the eventuality and which exerts effort to make the eventuality take place. A \term{patient}\footnote{The label ‘patient’ is usual, but ‘theme’ is also frequently used \parencite[67]{blake:2001}.} is an entity that undergoes an eventuality, often changing its state in some way. A typical example of these two thematic roles is with the verb ‘eat’. In the English sentence \fm{Alice ate moose} there is an agent \fm{Alice} and a patient \fm{moose} where the agent engages in the event of eating and the patient undergoes the event of eating. Other thematic roles will be introduced in the subsections below.
+
+The subject and object arguments are closely correlated with the agent and patient thematic roles, so it is tempting to use thematic roles to diagnose argument structure. But arguments and thematic roles are fundamentally independent concepts: arguments are syntactic where thematic roles are semantic. Because of this, purely syntactic diagnostics of argument structure are sometimes at odds with the semantic diagnostics of thematic roles. A classic example of this mismatch is the passive voice.\footnote{See chapter \ref{ch:supp} for more details on passive voice and how it works in Tlingit.} In English the subject of a verb is generally the agent of the eventuality, and likewise the object of a verb is generally the patient of the eventuality. This can be seen in the sentence in (\ref{ex:args-passive-act}) where the subject \fm{Becky} is the agent and the object \fm{a mosquito} is the patient.
+
+\ex\label{ex:args-passive-act}%
+\exrtcmt{non-passive}%
+\begingl
+	\gla	{} Becky {} kill-ed {} a mosquito. {} //
+	\glc	{}[\pr{DP} \xx{subj} {}] \xx{verb}-\xx{past} {}[\pr{DP} \xx{det} \xx{obj} {}] //
+	\gld	{} agent {} event {} \rlap{patient} {} {} //
+\endgl
+\xe
+
+One purely syntactic diagnostic for English subjects is their appearance before the verb, with objects following the verb in the sequence \fm{Subject Verb Object}. If we apply this syntactic diagnostic to the passive voice sentence in (\ref{ex:args-passive-psv}) we find that the subject is \fm{a mosquito}. But the thematic role of the subject \fm{a mosquito} in (\ref{ex:args-passive-psv}) is still the same as in (\ref{ex:args-passive-act}): it is a patient which undergoes the killing and thus dies. Also of note in (\ref{ex:args-passive-psv}) is the total lack of an object since there is nothing following the verb in the expected position for an object.
+
+\ex\label{ex:args-passive-psv}%
+\exrtcmt{passive}%
+\begingl
+	\gla	{} A mosquito {} was kill-ed. //
+	\glc	{}[\pr{DP} \xx{det} \xx{subj} {}] \xx{pasv}.\xx{past} \xx{verb}-\xx{past} //
+	\gld	{} \rlap{patient} {} {} {} event //
+\endgl
+\xe
+
+The agent can be explicitly mentioned in a passive sentence with a prepositional phrase headed by the preoposition \fm{by}. Although it is after the verb, this is a preposition phrase (PP) and so cannot be an object because objects by definition are determiner phrases (DPs) like \fm{a mosquito} in (\ref{ex:args-passive-act}). This PP \fm{by Becky} encoding the agent is instead an \term{oblique}: an argument that is neither a subject nor an object and which is usually a PP.
+
+\ex\label{ex:args-passive-psv-obl}%
+\exrtcmt{passive}%
+\begingl
+	\gla	{} A mosquito {} was kill-ed {} by Becky. {} //
+	\glc	{}[\pr{DP} \xx{det} \xx{subj} {}] \xx{pasv}.\xx{past} \xx{verb}-\xx{past} {}[\pr{PP} \xx{instr} \xx{obl} {}] //
+	\gld	{} \rlap{patient} {} {} {} event {} \rlap{agent} {} {} //
+\endgl
+\xe
+
+The thematic role structure of (\ref{ex:args-passive-psv-obl}) has the patient first and the agent last, where the patient is the grammatical subject and the agent is an oblique. This is roughly the inverse of the thematic role structure in (\ref{ex:args-passive-act}). We can see that the argument structure and the thematic role structure are not identical: although subjects are stereotypically agents, they can instead have other thematic roles depending on the syntactic structure of the sentence. Even though it is intuitively appealing to say something like “subject = agent”, we cannot rely on thematic roles to diagnose argument structure. We will use syntactic patterns as our primary diagnostics for argument structure in Tlingit, only secondarily referring to thematic role patterns.
+
+\section{Objects}\label{sec:args-obj}
+
+An \term{object} is an argument of a verb which usually appears either as a pronoun near the left edge in the verb word or as a separate phrase following the subject and preceding the verb word. Objects typically express the patient role, though they may have other thematic roles depending on the particular verb. The verb in (\ref{ex:args-obj-DP}) has the determiner phrase \fm{wé keitl} ‘the/that dog’ as its object. The verb in (\ref{ex:args-obj-pfx}) has the prefix \fm{i-} ‘you (sg.)’\ which is an object pronoun within the verb word.
+
+\pex\label{exx:args-obj}%
+\a\label{ex:args-obj-DP}%
+\exrtcmt{object as phrase}%
+\begingl
+	\gla	{} Dzéiwsh {} {} \gm{wé} \gm{keitl} {} \rlap{aawa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} Dzéiwsh {} {} \gm{wé} \gm{keitl} {} a- wu- i- \rt[²]{.usʼ} -μμH //
+	\glc	{}[\pr{DP} \xx{name} {}] {}[\pr{DP} \gm{\xx{mdst}} \gm{dog} {}]
+			\xx{arg}- \xx{pfv}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} Dzéiwsh {} {} \gm{the} \gm{dog} {} \rlap{3>3.\xx{pfv}.wash} {} {} {} {} //
+	\glft	‘Dzéiwsh washed the dog.’
+		//
+\endgl
+\a\label{ex:args-obj-pfx}%
+\exrtcmt{object as pronoun}%
+\begingl
+	\gla	{} Dzéiwsh {} \rlap{\gm{i}woo.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} Dzéiwsh {} \gm{i}- wu- i- \rt[²]{.usʼ} -μμH //
+	\glc	{}[\pr{DP} \xx{name} {}] \gm{\xx{2sg·o}}- \xx{pfv}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} Dzéiwsh {} \rlap{\gm{you·\xx{sg}}.\xx{pfv}.wash} {} {} {} {} //
+	\glft	‘Dzéiwsh washed you.’
+		//
+\endgl
+\xe
+
+Object pronouns and object phrases are mutually exclusive because they cannot occur together in the same clause. This is illustrated by the sentences in (\ref{exx:args-obj-notboth}). The first sentence in (\ref{ex:args-obj-notboth-phrase}) demonstrates a verb \fm{wutuwa.óosʼ} ‘we washed it’ with an object phrase \fm{haa keidlí} ‘our dog’. The second sentence in (\ref{ex:args-obj-notboth-pron}) replaces the object phrase with the object pronoun \fm{i-} ‘you (sg.)’. The combination in (\ref{ex:args-obj-notboth-both}) of both the object phrase and the object pronoun is ungrammatical.
+
+\pex\label{exx:args-obj-notboth}%
+\a\label{ex:args-obj-notboth-phrase}%
+\exrtcmt{object phrase}%
+\begingl
+	\gla	{} \gm{Haa} \rlap{\gm{keidlí}} @ {} {} \rlap{wutuwa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} \gm{haa} \gm{keitl} \gm{-í} {} wu- tu- i- \rt[²]{.usʼ} -μμH //
+	\glc	{}[\pr{DP} \gm{\xx{1pl·pss}} \gm{dog} \gm{-\xx{pss}} {}]
+			\xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} \gm{our} \gm{dog} {} {} \rlap{\xx{pfv}.we.wash} {} {} {} {} //
+	\glft	‘We washed our dog.’
+		//
+\endgl
+\a\label{ex:args-obj-notboth-pron}%
+\exrtcmt{object pronoun}%
+\begingl
+	\gla	\rlap{\gm{I}wtuwa.óosʼ.} @ {} @ {} @ {} @ {} @ {} //
+	\glb	\gm{i}- wu- tu- i- \rt[²]{.usʼ} -μμH //
+	\glc	\gm{\xx{2sg·o}}- \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	\rlap{\gm{you·\xx{sg}}.\xx{pfv}.we.wash} {} {} {} {} {} //
+	\glft	‘We washed you.’
+		//
+\endgl
+\a\label{ex:args-obj-notboth-both}%
+\ljudge{*}%
+\exrtcmt{*object pronoun + object phrase}%
+\begingl
+	\gla	{} \gm{Haa} \rlap{\gm{keidlí}} @ {} {} \rlap{\gm{i}wtuwa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} \gm{haa} \gm{keitl} \gm{-í} {} \gm{i}- wu- tu- i- \rt[²]{.usʼ} -μμH //
+	\glc	{}[\pr{DP} \gm{\xx{1sg·pss}} \gm{dog} \gm{-\xx{pss}} {}]
+			\gm{\xx{2sg·o}}- \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} \gm{our} \gm{dog} {} {} \rlap{\gm{you·\xx{sg}}.\xx{pfv}.we.wash} {} {} {} {} //
+	\glft	intended: ‘We washed you our dog.’ (speaking to our dog)
+		//
+\endgl
+\xe
+
+\FIXME{Since they are mutually incompatible, we can use object pronouns to diagnose object phrases and vice versa. The requirement of a verb for an object can thus be tested by testing forms with an object pronoun.}
+
+As noted earlier, objects generally correspond to the patient thematic role. But some verbs do not assign the patient role, instead assigning some other role to the object. The sentences in (\ref{exx:args-obj-roles}) show that the same object has different thematic roles depending on the verb.
+
+\pex\label{exx:args-obj-roles}%
+\a\label{ex:args-obj-roles-patient}%
+\exrtcmt{object as patient}%
+\begingl
+	\gla	{} Wé keitl {} \rlap{wutuwawóosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} wé keitl {} wu- tu- i- \rt[²]{wusʼ} -μμH //
+	\glc	{}[\pr{DP} \xx{mdst} dog {}] \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} that dog {} \rlap{\xx{pfv}.we.wash} {} {} {} {} //
+	\glft	‘We washed the dog.’
+		//
+\endgl
+\a\label{ex:args-obj-roles-result}%
+\exrtcmt{object as result}%
+\begingl
+	\gla	{} Wé keitl {} \rlap{kawtuwachʼákʼw.} @ {} @ {} @ {} @ {} @ {} //
+	\glb	{} wé keitl {} k- wu- tu- i- \rt[²]{chʼakʼw} -μH //
+	\glc	{}[\pr{DP} \xx{mdst} dog {}] \xx{qual}- \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{carve} -\xx{var} //
+	\gld	{} that dog {} \rlap{\xx{pfv}.we.carve} {} {} {} {} {} //
+	\glft	‘We carved the dog.’ (e.g.\ on a totem pole)
+		//
+\endgl
+\a\label{ex:args-obj-roles-addressee}%
+\exrtcmt{object as addressee}%
+\begingl
+	\gla	{} Wé keitl {} \rlap{wutuwax̱oox̱.} @ {} @ {} @ {} @ {} //
+	\glb	{} wé keitl {} wu- tu- i- \rt[²]{x̱ux̱} -μμL //
+	\glc	{}[\pr{DP} \xx{mdst} dog {}] \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{summon} -\xx{var} //
+	\gld	{} that dog {} \rlap{\xx{pfv}.we.summon} {} {} {} {} //
+	\glft	‘We summoned the dog.’
+		//
+\endgl
+\a\label{ex:args-obj-roles-experiencer}%
+\exrtcmt{object as experiencer}%
+\begingl
+	\gla	{} Wé keitl {} \rlap{wutulixʼán.} @ {} @ {} @ {} @ {} @ {} //
+	\glb	{} wé keitl {} wu- tu- l- i- \rt[¹]{xʼan} -μH //
+	\glc	{}[\pr{DP} \xx{mdst} dog {}] \xx{pfv}- \xx{1pl·s}- \xx{csv}- \xx{stv}- \rt[¹]{angry} -\xx{var} //
+	\gld	{} that dog {} \rlap{\xx{pfv}.we.make.angry} {} {} {} {} {} //
+	\glft	‘We upset the dog.’, ‘We made the dog get angry.’
+		//
+\endgl
+\xe
+
+The verb in (\ref{ex:args-obj-roles-patient}) is the same as earlier examples where the object \fm{wé keitl} ‘the/that dog’ is the patient which undergoes the washing event. The verb in (\ref{ex:args-obj-roles-result}) assigns the result role to the object. In the carving of a totem pole the log is the patient on which the carver (agent) works. A figure on the pole is not a patient because it is not an entity that undergoes carving, but rather is the result of the carver’s work on the pole. The verb in (\ref{ex:args-obj-roles-addressee}) assigns the addressee role to the object. The dog here is addressed by the agent through the agent’s speech act, but cannot be said to have undergone the speech act. The verb in (\ref{ex:args-obj-roles-experiencer}) assigns the experiencer role to the object. The dog in this eventuality experiences anger due to some unspecified actions of the agent.
+
+Across languages there are a wide variety of thematic roles that can be associated with objects. Only a few have been identified in Tlingit, so there is more research to be done on the verb lexicon for understanding thematic roles.
+
+\subsection{Object pronouns}\label{sec:args-obj-prons}
+
+Object pronouns are morphemes near the left edge of the verb which represent the object of a the verb. Some object pronouns in Tlingit are prefixes but other object pronouns are proclitics. Phonologically, the clitic object pronouns either have long vowels or coda consonants, i.e.\ they are CVV like \fm{haa=} [\ipa{hàː}] ‘us’ in (\ref{ex:args-obj-prons-clitic-cvv}) or CVC like \fm{x̱at=} [\ipa{χàt}] ‘me’ in (\ref{ex:args-obj-prons-clitic-cvc}). Written Tlingit generally represents clitics – both proclitics and enclitics – as though they are separate words with a space between them and their hosts. But as shown by their transcriptions in (\ref{exx:args-obj-prons-clitic}) clitics are pronounced more like they are part of their host.
+
+\pex\label{exx:args-obj-prons-clitic}%
+\a\label{ex:args-obj-prons-clitic-cvv}%
+\exrtcmt{CVV proclitic object}%
+\begingl
+	\gla	\gm{Haa} @ \rlap{wsiteen.} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{\gm{hàː}w.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	\gm{haa}= wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\gm{\xx{1pl·o}}= \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	\gm{us} \rlap{\xx{pfv}.s/he.see} {} {} {} {} //
+	\glft	‘S/he saw us.’
+		//
+\endgl
+\a\label{ex:args-obj-prons-clitic-cvc}%
+\exrtcmt{CVC proclitic object}%
+\begingl
+	\gla	\gm{X̱at} @ \rlap{wusiteen.} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{\gm{χàt}.wù.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	\gm{x̱at}= wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\gm{\xx{1sg·o}}= \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	\gm{me} \rlap{\xx{pfv}.s/he.see} {} {} {} {} //
+	\glft	‘S/he saw me.’
+		//
+\endgl
+\xe
+
+In contrast with the proclitic objects, the prefix object pronouns have short vowels so they are all CV- like \fm{i-} [\ipa{ʔì}] ‘you (sg.)’ in (\ref{ex:args-obj-prons-prefix}). A few object pronouns vary in their vowel length from speaker to speaker, and so these waver between being prefixes and proclitics. These differences are discussed in detail for each object pronoun in the subsections below.
+
+\ex\label{ex:args-obj-prons-prefix}%
+\exrtcmt{CV prefix object}%
+\begingl
+	\gla	\rlap{\gm{I}wsiteen.} @ {} @ {} @ {} @ {} @ {} //	
+	\glp	\llap{[}\rlap{\ipa{\gm{ʔì}w.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	\gm{i}- wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\gm{\xx{2sg·o}}= \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	 \rlap{\gm{you·\xx{sg}}\xx{pfv}.s/he.see} {} {} {} {} {} //
+	\glft	‘S/he saw you (sg.).’
+		//
+\endgl
+\xe
+
+Object pronouns can only be objects, never subjects. This is shown in (\ref{exx:args-obj-only}) by comparing the first person singular object pronoun \fm{haa=} ‘us’ with the first person singular subject pronoun \fm{tu-} ‘we’. The form in (\ref{ex:args-obj-only-obj}) uses the object pronoun \fm{x̱at=} which can only be interpreted as an object in (i) ‘Dzéiwsh washed us’ and not as a subject in (ii) ‘We washed Dzéiwsh’. The form in (\ref{ex:args-obj-only-subj}) uses the subject pronoun \fm{x̱-} and this can only be interpreted as a subject in (ii) ‘We washed Dzéiwsh’ and not as an object in (i) ‘Dzéiwsh washed us’.
+
+\pex\label{exx:args-obj-only}%
+\a\label{ex:args-obj-only-obj}%
+\exrtcmt{object pronoun}%
+\begingl
+	\gla	{} Dzéiwsh {} \gm{haa} @ \rlap{woo.óosʼ.} @ {} @ {} @ {}  //
+	\glb	{} Dzéiwsh {} \gm{haa}= wu- i- \rt[²]{.usʼ} -μμH / //
+	\glc	{}[\pr{DP} \xx{name} {}] \gm{\xx{1pl·o}}= \xx{pfv}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} Dzéiwsh {} \gm{we} \rlap{\xx{pfv}.wash} {} {} {}  //
+	\glft	\phantom{i}i.\hspace{1em}‘Dzéiwsh washed us.’\newline
+		ii.\hspace{1em}\ljudge{*}‘We washed Dzéiwsh.’
+		//
+\endgl
+\a\label{ex:args-obj-only-subj}%
+\exrtcmt{subject pronoun}%
+\begingl
+	\gla	{} Dzéiwsh {} \rlap{wu\gm{tu}wa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} Dzéiwsh {} wu- \gm{tu}- i- \rt[²]{.usʼ} -μμH / //
+	\glc	{}[\pr{DP} \xx{name} {}] \xx{pfv}- \gm{\xx{1pl·s}}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} Dzéiwsh {} \rlap{\xx{pfv}.\gm{we}.wash} {} {} {} {} //
+	\glft	\phantom{i}i.\hspace{1em}\ljudge{*}‘Dzéiwsh washed us.’\newline
+		ii.\hspace{1em}‘We washed Dzéiwsh.’
+		//
+\endgl
+\xe
+
+Object pronouns are near the left edge (start) of the verb word. All of the preceding examples with object pronouns have them leftmost in the verb word, but this is not always true because there are a few things that can precede them. The sentence in (\ref{ex:args-obj-preceding}) shows a preverb and a pluralizer preceding the object pronoun \fm{x̱at=} ‘me’. The proclitic \fm{ÿaa=} ‘along’ is a preverb that is required here as part of the progressive aspect. The proclitic \fm{has=} is a pluralizer that here makes the covert (unspoken) third person subject both plural and human.
+
+\ex\label{ex:args-obj-preceding}%
+\begingl
+	\gla	{} \rlap{Aandé} @ {} {} \gm{yaa} @ \gm{has} @ \gm{x̱at}= @ \rlap{nasxátʼ.} @ {} @ {} @ {} //
+	\glb	{} aan -dé {} \gm{ÿaa}= \gm{has}= \gm{x̱at}= n- s- \rt[²]{xatʼ} -μH //
+	\glc	{}[\pr{PP} town -\xx{all} {}] \gm{along}= \gm{\xx{plh}}= \gm{\xx{1sg·o}}= \xx{ncnj}- \xx{xtn}-
+			\rt[²]{drag} -\xx{var}  //
+	\gld	{} town -to {} \gm{along} \gm{they} \gm{me} \rlap{\xx{prog}.drag} {} {} {} //
+	\glft	‘They are dragging me here.’
+		//
+\endgl
+\xe
+
+Adding other proclitics to the verb makes clear the difference in position between object pronouns and object phrases. First consider the sentences in (\ref{exx:args-obj-order-pron}) which use the object pronoun \fm{x̱at=} ‘me’. The sentence in (\ref{ex:args-obj-order-pron-inside}) has the object pronoun in its normal position between the preverb \fm{ÿaa=} ‘along’ and the rest of the verb word. The sentence in (\ref{ex:args-obj-order-pron-outside-1}) wrongly puts the object pronoun before the preverb and this is ungrammatical. The sentence in (\ref{ex:args-obj-order-pron-outside-2}) goes even further, wrongly putting the object pronoun before the destination PP \fm{aandé} ‘to(ward) town’ and thus totally outside of the verb word.
+
+\pex\label{exx:args-obj-order-pron}%
+\a\label{ex:args-obj-order-pron-inside}%
+\exrtcmt{object pronoun in normal spot}%
+\begingl
+	\gla	{} \rlap{Aandé} @ {} {} yaa @ \gm{x̱at} @ \rlap{naysxátʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} aan -dé {} ÿaa= \gm{x̱at}= n- ÿi- s- \rt[²]{xatʼ} -μH //
+	\glc	{}[\pr{PP} town -\xx{all} {}] along= \gm{\xx{1sg·o}}= \xx{ncnj}- \xx{2pl·s}- \xx{xtn}- 
+			\rt[²]{drag} -\xx{var} //
+	\gld	{} town -to {} along \gm{me} \rlap{\xx{prog}.you·\xx{pl}.drag} {} {} {} {} {} //
+	\glft	‘You guys are dragging me towards town.’
+		//
+\endgl
+\a\label{ex:args-obj-order-pron-outside-1}%
+\ljudge{*}%
+\exrtcmt{*object pronoun before preverb}%
+\begingl
+	\gla	{} \rlap{Aandé} @ {} {} \gm{x̱at} @ yaa @ \rlap{naysxátʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} aan -dé {} \gm{x̱at}= ÿaa= n- ÿi- s- \rt[²]{xatʼ} -μH //
+	\glc	{}[\pr{PP} town -\xx{all} {}] \gm{\xx{1sg·o}}= along= \xx{ncnj}- \xx{2pl·s}- \xx{xtn}- 
+			\rt[²]{drag} -\xx{var} //
+	\gld	{} town -to {} \gm{me} along \rlap{\xx{prog}.you·\xx{pl}.drag} {} {} {} {} {} //
+	\glft	intended: ‘You guys are dragging me towards town.’
+		//
+\endgl
+\a\label{ex:args-obj-order-pron-outside-2}%
+\ljudge{*}%
+\exrtcmt{*object pronoun outside verb}%
+\begingl
+	\gla	\gm{X̱at} {} \rlap{aandé} @ {} {} yaa @ \rlap{naysxátʼ.} @ {} @ {} @ {} @ {} //
+	\glb	\gm{x̱at}= {} aan -dé {} ÿaa= n- ÿi- s- \rt[²]{xatʼ} -μH //
+	\glc	\gm{\xx{1sg·o}}= {}[\pr{PP} town -\xx{all} {}] along= \xx{ncnj}- \xx{2pl·s}- \xx{xtn}- 
+			\rt[²]{drag} -\xx{var} //
+	\gld	\gm{me} {} town -to{} along \rlap{\xx{prog}.you·\xx{pl}.drag} {} {} {} {} {} //
+	\glft	intended: ‘You guys are dragging me towards town.’
+		//
+\endgl
+\xe
+
+Now consider the sentences in (\ref{exx:args-obj-order-phrase}) which use the object phrase \fm{wé keitl} ‘the/that dog’. The sentence in (\ref{ex:args-obj-order-phrase-outside}) has the object phrase in its normal spot preceding the destination PP. The sentence in (\ref{ex:args-obj-order-phrase-inside-1}) puts the object phrase in between the destination PP and the verb word; this is still interpretable but it still sounds strange and may be ungrammatical as indicated by the ‘*?’. Finally the sentence in (\ref{ex:args-obj-order-phrase-inside-2}) goes completely off the rails by putting the object phrase inside of the verb word after the preverb, resulting in a sentence that sounds like nonsense.
+
+\pex\label{exx:args-obj-order-phrase}%
+\a\label{ex:args-obj-order-phrase-outside}%
+\exrtcmt{object phrase in normal spot}%
+\begingl
+	\gla	{} \gm{Wé} \gm{keitl} {} {} \rlap{aandé} @ {} {} yaa @ \rlap{naysxátʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} \gm{wé} \gm{keitl} {} {} aan -dé {} ÿaa= n- ÿi- s- \rt[²]{xatʼ} -μH //
+	\glc	{}[\pr{DP} \gm{\xx{mdst}} \gm{dog} {}] {}[\pr{PP} town -\xx{all} {}]
+			along= \xx{ncnj}- \xx{2pl·s}- \xx{xtn}- \rt[²]{drag} -\xx{var} //
+	\gld	{} \gm{that} \gm{dog} {} {} town -\xx{all} {} along \rlap{\xx{prog}.you·\xx{pl}.drag} {} {} {} {} {} //
+	\glft	‘You guys are dragging the dog towards town.’
+		//
+\endgl
+\a\label{ex:args-obj-order-phrase-inside-1}%
+\ljudge{*?}%
+\exrtcmt{*?\!object phrase before preverb}%
+\begingl
+	\gla	{} \rlap{Aandé} @ {} {} {} \gm{wé} \gm{keitl} {} yaa @ \rlap{naysxátʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} aan -dé {} {} \gm{wé} \gm{keitl} {} ÿaa= n- ÿi- s- \rt[²]{xatʼ} -μH //
+	\glc	{}[\pr{PP} town -\xx{all} {}] {}[\pr{DP} \gm{\xx{mdst}} \gm{dog} {}]
+			along= \xx{ncnj}- \xx{2pl·s}- \xx{xtn}- \rt[²]{drag} -\xx{var} //
+	\gld	{} town -\xx{all} {} {} \gm{that} \gm{dog} {} along \rlap{\xx{prog}.you·\xx{pl}.drag} {} {} {} {} {} //
+	\glft	intended: ‘You guys are dragging the dog towards town.’
+		//
+\endgl
+\a\label{ex:args-obj-order-phrase-inside-2}%
+\ljudge{*}%
+\exrtcmt{*object phrase after preverb}%
+\begingl
+	\gla	{} \rlap{Aandé} @ {} {} yaa {} \gm{wé} \gm{keitl} {} \rlap{naysxátʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} aan -dé {} ÿaa= {} \gm{wé} \gm{keitl} {} n- ÿi- s- \rt[²]{xatʼ} -μH //
+	\glc	{}[\pr{PP} town -\xx{all} {}] along= {}[\pr{DP} \gm{\xx{mdst}} \gm{dog} {}]
+			 \xx{ncnj}- \xx{2pl·s}- \xx{xtn}- \rt[²]{drag} -\xx{var} //
+	\gld	{} town -\xx{all} {} along {} \gm{that} \gm{dog} {} \rlap{\xx{prog}.you·\xx{pl}.drag} {} {} {} {} {} //
+	\glft	intended: ‘You guys are dragging the dog towards town.’
+		//
+\endgl
+\xe
+
+Another phenomenon emphasizing the difference between object pronouns and object phrases is that the object pronouns do not allow any outside material to appear between them and the verb word. A \term{second position} particle is a particle that appears immediately after the first phrase in a sentence. Even though there seems to be space between the object pronoun and the verb, second position particles are not allowed in this space unlike their appearance after an object phrase. Conceptually, the junction between the object pronouns and the verb is tighter than between object phrases and the verb and other material cannot be squeezed into this constrained space.
+
+A typical example of a second position particle in Tlingit is the additive focus particle \fm{tsú} ‘also, too, in addition’. Its requirement for second position is illustrated in (\ref{exx:args-obj-order-2posn-dp}) with an object phrase \fm{dóosh} ‘cat’. First, the sentence in (\ref{ex:args-obj-order-2posn-dp-ctx}) is a discourse context to support the use of \fm{tsú}; since \fm{tsú} signals addition to some previously established information we need some previous information to add to. Then the sentence in (\ref{ex:args-obj-order-2posn-dp-initial}) has \fm{tsú} in initial position which is ungrammatical since \fm{tsú} can only follow a phrase. The sentence in (\ref{ex:args-obj-order-2posn-dp-second}) puts \fm{tsú} in the second position following the object phrase, thus showing that \fm{tsú} is a second position particle.
+
+\ex\label{ex:args-obj-order-2posn-dp-ctx}%
+\exrtcmt{discourse context sentence}%
+\begingl
+	\gla	{} Keitl {} \rlap{wutuwa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} keitl {} wu- tu- i- \rt[²]{.usʼ} -μμH //
+	\glc	{}[\pr{DP} dog {}] \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} dog {} \rlap{\xx{pfv}.we.wash} {} {} {} {} //
+	\glft	‘We washed a/the dog.’
+		//
+\endgl
+\xe
+
+\pex\label{exx:args-obj-order-2posn-dp}%
+\a\label{ex:args-obj-order-2posn-dp-initial}%
+\exrtcmt{*initial position}%
+\ljudge{*}%
+\begingl
+	\gla	\gm{Tsú} {} dóosh {} \rlap{wutuwa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	\gm{tsú} {} dóosh {} wu- tu- i- \rt[²]{.usʼ} -μμH //
+	\glc	\gm{also} {}[\pr{DP} cat {}] \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	\gm{also} {} cat {} \rlap{\xx{pfv}.we.wash} {} {} {} {} //
+	\glft	intended: ‘We washed a/the cat also.’ (cf.\ *‘We washed also a/the cat.’)
+		//
+\endgl
+\a\label{ex:args-obj-order-2posn-dp-second}%
+\exrtcmt{second position}%
+\begingl
+	\gla	{} Dóosh {} \gm{tsú} \rlap{wutuwa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} dóosh {} \gm{tsú} wu- tu- i- \rt[²]{.usʼ} -μμH //
+	\glc	{}[\pr{DP} cat {}] \gm{also} \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} cat {} \gm{also} \rlap{\xx{pfv}.we.wash} {} {} {} {} //
+	\glft	‘We washed a/the cat also.’
+		//
+\endgl
+\xe
+
+Switching to a proclitic object pronoun in (\ref{exx:args-obj-order-2posn-procl}), we find that \fm{tsú} cannot occur between this pronoun and the rest of the verb. Once again we have a context sentence in (\ref{ex:args-obj-order-2posn-procl-ctx}). Instead of an object phrase like \fm{dóosh} ‘cat’ above, we use the proclitic object pronoun \fm{ÿee=} ‘you pl.’. The sentence in (\ref{ex:args-obj-order-2posn-procl-init}) shows that, as we expect, \fm{tsú} cannot be in initial position. But the sentence in (\ref{ex:args-obj-order-2posn-procl-procl}) shows that \fm{tsú} cannot occur between the object pronoun \fm{ÿee=} and the rest of the verb.
+
+\ex\label{ex:args-obj-order-2posn-procl-ctx}%
+\exrtcmt{context sentence}%
+\begingl
+	\gla	{} Keitl {} \rlap{wutuwa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} keitl {} wu- tu- i- \rt[²]{.usʼ} -μμH //
+	\glc	{}[\pr{DP} dog {}] \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} dog {} \rlap{\xx{pfv}.we.wash} {} {} {} {} //
+	\glft	‘We washed a/the dog.’
+		//
+\endgl
+\xe
+
+\pex\label{exx:args-obj-order-2posn-procl}%
+\a\label{ex:args-obj-order-2posn-procl-init}%
+\exrtcmt{*initial position with proclitic pronoun}%
+\ljudge{*}%
+\begingl
+	\gla	\gm{Tsú} yee @ \rlap{wtuwa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	\gm{tsú} ÿee= wu- tu- i- \rt[²]{.usʼ} -μμH //
+	\glc	\gm{also} \xx{2pl·o}= \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	\gm{also} you·\xx{pl} \rlap{\xx{pfv}.we.wash} {} {} {} {} //
+	\glft	intended: ‘We washed you guys also.’
+		//
+\endgl
+\a\label{ex:args-obj-order-2posn-procl-procl}%
+\exrtcmt{*second position with proclitic pronoun}%
+\ljudge{*}%
+\begingl
+	\gla	Yee \gm{tsú} \rlap{wtuwa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	ÿee= \gm{tsú} wu- tu- i- \rt[²]{.usʼ} -μμH //
+	\glc	\xx{2pl·o}= \gm{also} \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	you·\xx{pl} \gm{also} \rlap{\xx{pfv}.we.wash} {} {} {} {} //
+	\glft	intended: ‘We washed you guys also.’
+		//
+\endgl
+\xe
+
+So how do we express the intended meaning of (\ref{ex:args-obj-order-2posn-procl-init}) and (\ref{ex:args-obj-order-2posn-procl-procl}) since both options are ungrammatical? There are a few different repair strategies, two of which are shown in (\ref{exx:args-obj-order-2posn-procl-fixed}). The strategy in (\ref{ex:args-obj-order-2posn-procl-fixed-indep}) introduces an independent pronoun at the beginning of the sentence, providing a second position following this phrase for the \fm{tsú} to appear.\footnote{This is phenomenon of combining an object pronoun with an independent phrase is called ‘clitic doubling’ and is found in many languages but not in English. We will discuss it in a future document on word order and information structure.} The strategy in (\ref{ex:args-obj-order-2posn-procl-fixed-verb}) places the \fm{tsú} after the verb word which works because the verb is a phrase that can host a second position particle.
+
+\pex\label{exx:args-obj-order-2posn-procl-fixed}%
+\a\label{ex:args-obj-order-2posn-procl-fixed-indep}%
+\exrtcmt{second position after indep.\ pronoun}%
+\begingl
+	\gla	{} Yeewháan {} \gm{tsú} yee @ \rlap{wtuwa.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	{} ÿeewháan {} \gm{tsú} ÿee= wu- tu- i- \rt[²]{.usʼ} -μμH //
+	\glc	{}[\pr{DP} \xx{2pl} {}] \gm{also} \xx{2pl·o}= \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} you·\xx{pl} {} \gm{also} you·\xx{pl} \rlap{\xx{pfv}.we.wash} {} {} {} {} //
+	\glft	‘We washed you guys also.’
+		//
+\endgl
+\a\label{ex:args-obj-order-2posn-procl-fixed-verb}%
+\exrtcmt{second position after verb}%
+\begingl
+	\gla	Yee @ \rlap{wtuwa.óosʼ} @ {} @ {} @ {} @ {} \gm{tsú}. //
+	\glb	ÿee= wu- tu- i- \rt[²]{.usʼ} -μμH \gm{tsú} //
+	\glc	\xx{2pl·o}= \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{wash} -\xx{var} \gm{also} //
+	\gld	you·\xx{pl} \rlap{\xx{pfv}.we.wash} {} {} {} {} \gm{also} //
+	\glft	‘We also washed you guys.’
+		//
+\endgl
+\xe
+
+The number of possible object phrases is effectively infinite because any DP can be an object and there is an unlimited number of possible DPs in any language. Because of this it is impossible to assemble a complete list of possible object phrases. In contrast, there are only a few possible object pronouns in Tlingit. The following subsections review the object pronouns: first person singular ‘me’ in section \ref{sec:args-obj-prons-1sg}, first person plural ‘us’ in section \ref{sec:args-obj-1pl}, second person singular ‘you (sg.)’ in section \ref{sec:args-obj-2sg}, second person plural ‘you guys’ in section \ref{sec:args-obj-2pl}, and a short summary of the remaining object pronouns in section \ref{sec:args-obj-other}. Table \ref{tab:args-obj-prons} gives a complete inventory of the object pronouns.
+
+\begin{table}
+\centerfloat
+\begin{tabular}{r@{\hspace{0.25ex}}llll}
+\toprule
+		&		& \tlbl{proclitic form}	& \tlbl{prefix form}	& \tlbl{other similar pronouns}\\
+\midrule
+\xx{1}	& \xx{sg}		& x̱at= \~\ ax̱=		&			& indep.\ \fm{x̱át}, poss.\ \fm{ax̱}\\
+\xx{1}	& \xx{pl}		& haa=			&			& poss.\ \fm{haa}\\
+\smalltableleading
+\xx{2}	& \xx{sg}		& ee=			& i-			& poss.\ \fm{i}\\
+\xx{2}	& \xx{pl}		& ÿee=			& ÿi-			& poss.\ \fm{ÿee}\\
+\smalltableleading
+\xx{3}	& \xx{prx}		& ash=			&			& poss.\ \fm{ash}\\
+\smalltableleading
+\xx{4}	& \xx{h}		& ḵaa=			& ḵu-		& poss.\ \fm{ḵaa}, loc.\ \fm{ḵú}\\
+\xx{4}	& \xx{n}		& at=			& a-			& poss.\ \fm{at}, noun \fm{át} ‘thing’\\
+\tableleading
+\multicolumn{2}{l}{\xx{arg}}
+					&				& a-			& indep.\ \fm{á}, poss.\ \fm{a}\\
+\multicolumn{2}{l}{\xx{xpl}}
+					&				& a-			&\\
+\bottomrule
+\end{tabular}
+\caption{Object pronouns}
+\label{tab:args-obj-prons}
+\end{table}
+
+\subsubsection{First person singular}\label{sec:args-obj-prons-1sg}
+
+The first person singular object pronoun is a proclitic \fm{x̱at=} ‘me’. This occurs only in verbs and always has low tone. It must not be confused with the independent pronoun \fm{x̱át} that has high tone. The sentences in (\ref{exx:args-obj-1sg}) show that only \fm{x̱at=} ‘me’ can occur as the object of a verb and that \fm{x̱át} ‘I, me’ in the same position is ungrammatical. Compare (\ref{ex:args-obj-1sg-word}) with the earlier (\ref{ex:args-obj-DP}) that has an object phrase instead of a pronoun.
+
+\pex\label{exx:args-obj-1sg}%
+\a\label{ex:args-obj-1sg-procl}%
+\exrtcmt{object pronoun}%
+\begingl
+	\gla	{} Dzéiwsh {} \gm{x̱at} @ \rlap{woo.óosʼ.} @ {} @ {} @ {} //
+	\glb	{} Dzéiwsh {} \gm{x̱at}= wu- i- \rt[²]{.usʼ} -H //
+	\glc	{}[\pr{DP} \xx{name} {}] \gm{\xx{1sg·o}}= \xx{pfv}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} Dzéiwsh {} me \rlap{\xx{pfv}.wash} {} {} {} //
+	\glft	‘Dzéiwsh washed me.’
+		//
+\endgl
+\a\label{ex:args-obj-1sg-word}%
+\ljudge{*}%
+\exrtcmt{*independent pronoun}%
+\begingl
+	\gla	{} Dzéiwsh {} {} \gm{x̱át} {} \rlap{woo.óosʼ.} @ {} @ {} @ {} //
+	\glb	{} Dzéiwsh {} {} \gm{x̱át} {} wu- i- \rt[²]{.usʼ} -H //
+	\glc	{}[\pr{DP} \xx{name} {}] {}[\pr{DP} \gm{\xx{1sg}} {}] \xx{pfv}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	{} Dzéiwsh {} {} \gm{me} {} \rlap{\xx{pfv}.wash} {} {} {} //
+	\glft	intended: ‘Dzéiwsh washed me.’
+		//
+\endgl
+\xe
+
+Further emphasizing the difference between these two pronouns, the examples in (\ref{exx:args-obj-1sg-noverb}) show that the independent pronoun \fm{x̱át} ‘I, me’ has contexts where it can occur and the object pronoun \fm{x̱at=} ‘me’ is not allowed. Specifically, in non-verbal predicates there is no verb that can take the object pronoun \fm{x̱at=} and the independent pronoun \fm{x̱át} is used instead. Although the two pronouns have the same consonants and vowels, they differ in tone and this difference means they are not identical: one cannot be used for the other. This shows that tone is not merely emphasis, but rather is an essential part of a word in Tlingit just like consonants and vowels.
+
+\pex\label{exx:args-obj-1sg-noverb}%
+\a\label{ex:args-obj-1sg-noverb-indep}%
+\exrtcmt{independent pronoun}%
+\begingl
+	\gla	{} \gm{X̱át} {} \rlap{áyá,} @ {} {} Deenáa. {} //
+	\glb	{} \gm{x̱át} {} á -yá {} Deenáa {}  //
+	\glc	{}[\pr{DP} \gm{\xx{1sg}} {}] \xx{cpl} -\xx{prox} {}[\pr{DP} \xx{name} {}] //
+	\gld	{} \gm{me} {} \rlap{it.is} {} {} Deenáa {} //
+	\glft	‘It is me, Deenáa.’
+		//
+\endgl
+\a\label{ex:args-obj-1sg-noverb-procl}%
+\ljudge{*}%
+\exrtcmt{*object pronoun}%
+\begingl
+	\gla	{} \gm{X̱at} {} \rlap{áyá,} @ {} {} Deenáa. {} //
+	\glb	{} \gm{x̱at}= {} á -yá {} Deenáa {}  //
+	\glc	{}[\pr{DP} \gm{\xx{1sg·o}}= {}] \xx{cpl} -\xx{prox} {}[\pr{DP} \xx{name} {}] //
+	\gld	{} \gm{me} {} \rlap{it.is} {} {} Deenáa {} //
+	\glft	intended: ‘It is me, Deenáa.’
+		//
+\endgl
+\xe
+
+The first person singular object pronoun can occasionaly occur as \fm{ax̱=} rather than \fm{x̱at=}. Some speakers do not allow \fm{ax̱=} in this context and only have \fm{x̱at=}. For speakers who do allow \fm{ax̱=}, it can be used when there is an incorporated noun immediately following the object. This is shown by the contrast between \fm{x̱at=} in (\ref{ex:args-obj-1sg-inc-xhat}) and \fm{ax̱=} in (\ref{ex:args-obj-1sg-inc-axh}) with the same verb that includes the incorporated noun \fm{sha-} ‘head’.
+
+\pex\label{exx:args-obj-1sg-inc}%
+\a\label{ex:args-obj-1sg-inc-xhat}%
+\exrtcmt{x̱at= with incorporated noun}%
+\begingl
+	\gla	\gm{X̱at} @ \rlap{shaawaxaash.} @ {} @ {} @ {} @ {} //
+	\glb	\gm{x̱at}= sha- wu- i- \rt[²]{xash} -μμL //
+	\glc	\gm{\xx{1sg·o}}= head- \xx{pfv}- \xx{stv}- \rt[²]{cut} -\xx{var} //
+	\gld	me \rlap{hair.\xx{pfv}.s/he.cut} {} {} {} {} //
+	\glft	‘S/he hair-cut me.’
+		//
+\endgl
+\a\label{ex:args-obj-1sg-inc-axh}%
+\exrtcmt{ax̱= with incorporated noun}%
+\begingl
+	\gla	\gm{Ax̱} @ \rlap{shaawaxaash.} @ {} @ {} @ {} @ {} //
+	\glb	\gm{ax̱}= sha- wu- i- \rt[²]{xash} -μμL //
+	\glc	\gm{\xx{1sg·o}}= head- \xx{pfv}- \xx{stv}- \rt[²]{cut} -\xx{var} //
+	\gld	my \rlap{hair.\xx{pfv}.s/he.cut} {} {} {} {} //
+	\glft	‘S/he hair-cut me.’
+		//
+\endgl
+\xe
+
+The \fm{ax̱=} variant of the first person singular object pronoun is phonologically identical with the first person possessive pronoun \fm{ax̱} ‘my’ as in \fm{ax̱ keidlí} ‘my dog’ and \fm{ax̱ éesh} ‘my father’. This similarity is not an accident. The \fm{ax̱=} variant in forms like (\ref{ex:args-obj-1sg-inc-axh}) is in fact the same possessive pronoun functioning as the possessor of the incorporated noun. This is confirmed by the fact that, as shown in (\ref{exx:args-obj-1sg-noinc}), the \fm{ax̱=} is never allowed without an incorporated noun.
+
+\pex\label{exx:args-obj-1sg-noinc}%
+\a\label{ex:args-obj-1sg-noinc-xhat}%
+\exrtcmt{x̱at= without incorporated noun}%
+\begingl
+	\gla	\gm{X̱at} @ \rlap{wooxaash.} @ {} @ {} @ {} //
+	\glb	\gm{x̱at}= wu- i- \rt[²]{xash} -μμH //
+	\glc	\gm{\xx{1sg·o}}= \xx{pfv}- \xx{stv}- \rt[²]{cut} -\xx{var} //
+	\gld	me \rlap{\xx{pfv}.s/he.cut} //
+	\glft	‘S/he cut me.’
+		//
+\endgl
+\a\label{ex:args-obj-1sg-noinc-axh}%
+\ljudge{*}%
+\exrtcmt{*ax̱= without incorporated noun}%
+\begingl
+	\gla	\gm{Ax̱} @ \rlap{wooxaash.} @ {} @ {} @ {} //
+	\glb	\gm{ax̱}= wu- i- \rt[²]{xash} -μμH //
+	\glc	\gm{\xx{1sg·o}}= \xx{pfv}- \xx{stv}- \rt[²]{cut} -\xx{var} //
+	\gld	my \rlap{\xx{pfv}.s/he.cut} //
+	\glft	intended: ‘S/he cut me.’
+		//
+\endgl
+\xe
+
+\FIXME{Discuss similarity with with subject pronoun, direct PP pronoun, indirect PP pronoun.}
+
+\subsubsection{First person plural}\label{sec:args-obj-1pl}
+
+The first person plural object pronoun is a proclitic \fm{haa=} ‘us’. This pronoun is more or less identical to the first person plural possessive pronoun as in \fm{haa keidlí} ‘our dog’ and \fm{haa tláa} ‘our mother’, but the grammatical function is different: the object proclitic \fm{haa=} is an argument of a verb and not a modifier of a noun. In contrast with the \fm{ax̱=} form of the first person singular object, the first person plural object \fm{haa=} is used both with and without incorporated nouns. This is shown by the examples in (\ref{exx:args-obj-1pl-inc}) where the same \fm{haa=} is used with the incorporated noun \fm{sha-} in (\ref{ex:args-obj-1pl-inc-with}) as well as without an incorporated noun in (\ref{ex:args-obj-1pl-inc-without}). Contrast this with the facts in (\ref{exx:args-obj-1sg-inc}) and (\ref{exx:args-obj-1sg-noinc}) where the first person singular \fm{ax̱=} is only allowed with an incorporated noun, \fm{x̱at=} being used elsewhere.
+
+\pex\label{exx:args-obj-1pl-inc}%
+\a\label{ex:args-obj-1pl-inc-with}%
+\exrtcmt{haa= with incorporated noun}%
+\begingl
+	\gla	\gm{Haa} @ \rlap{shaawaxaash.} @ {} @ {} @ {} @ {} //
+	\glb	\gm{haa}= sha- wu- i- \rt[²]{xash} -μμL //
+	\glc	\gm{\xx{1pl·o}}= head- \xx{pfv}- \xx{stv}- \rt[²]{cut} -\xx{var} //
+	\gld	us \rlap{hair.\xx{pfv}.s/he.cut} {} {} {} {} //
+	\glft	‘S/he hair-cut us.’
+		//
+\endgl
+\a\label{ex:args-obj-1pl-inc-without}%
+\exrtcmt{haa= without incorporated noun}%
+\begingl
+	\gla	\gm{Haa} @ \rlap{wooxaash.} @ {} @ {} @ {} //
+	\glb	\gm{haa}= wu- i- \rt[²]{xash} -μμH //
+	\glc	\gm{\xx{1pl·o}}= \xx{pfv}- \xx{stv}- \rt[²]{cut} -\xx{var} //
+	\gld	us \rlap{\xx{pfv}.s/he.cut} //
+	\glft	‘S/he cut us.’
+		//
+\endgl
+\xe
+
+Since \fm{haa=} is a proclitic and an open syllable, it can interact with the syllable following it in the verb word. The most common interaction is \term{syncope} which is when a sound is deleted, either resulting in the reduction of the number of syllables or the reduction of complexity in a consonant cluster.\footnote{Syncope is pronounced [\ipa{ˈsɪŋ.kə.pi}] and derives from Ancient Greek συγκοπή \fm{syŋkopḗ} ‘cutting up’. An English example of syncope is \fm{fasten} [\ipa{ˈfæ.sɛn}] + \fm{-er} → \fm{fastener} [\ipa{ˈfæ.sɛ.nəɹ}] syncopated to \fm{fast’ner} [\ipa{ˈfæs.nəɹ}].} The typical example of syncope with \fm{haa=} is with the perfective prefix \fm{wu-} followed by another syllable before the stem, where the perfective prefix loses its vowel and becomes just \fm{w} in the coda of the \fm{haa=} syllable as [\ipa{hàːw}]. The examples in (\ref{exx:args-obj-1pl-sync}) show a verb without syncope of \fm{wu-} in (\ref{ex:args-obj-1pl-sync-without}) and the equivalent verb with syncope of \fm{wu-} in (\ref{ex:args-obj-1pl-sync-with}). The verb word without syncope in (\ref{ex:args-obj-1pl-sync-without}) has four syllables where the verb word with syncope in (\ref{ex:args-obj-1pl-sync-with}) has only three.
+
+\pex\label{exx:args-obj-1pl-sync}%
+\a\label{ex:args-obj-1pl-sync-without}%
+\exrtcmt{verb word without syncope of wu-}%
+\begingl
+	\gla	Haa @ \rlap{\gm{wu}siteen.} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{hàː.\gm{wù}.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	haa= wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\xx{1pl·o}= \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	us= \rlap{\xx{pfv}.s/he.see} {} {} {} {} //
+	\glft	‘S/he saw us.’
+		//
+\endgl
+\a\label{ex:args-obj-1pl-sync-with}%
+\exrtcmt{verb word with syncope of wu-}%
+\begingl
+	\gla	Haa @ \rlap{\gm{w}siteen.} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{hàː\gm{w}.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	haa= wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\xx{1pl·o}= \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	us= \rlap{\xx{pfv}.s/he.see} {} {} {} {} //
+	\glft	‘S/he saw us.’
+		//
+\endgl
+\xe
+
+This particular case of syncope is optional because \fm{haa=} is a proclitic and so is only loosely bound to the rest of the verb word. Similar syncopation is required when there is a CV prefix instead of a proclitic, as for example the second person singular object \fm{i-} ‘you (sg.)’. This is a CV prefix [\ipa{ʔì}] because it has an onset glottal stop /\ipa{ʔ}/ which is not normally written at the beginning of a word. The forms in (\ref{exx:args-obj-1pl-sync-2sg}) show that the perfective \fm{wu-} prefix must be syncopated following \fm{i-}, unlike \fm{haa=} where the syncopation of \fm{wu-} is optional.
+
+\pex\label{exx:args-obj-1pl-sync-2sg}%
+\a\label{ex:args-obj-1pl-sync-2sg-without}%
+\exrtcmt{*verb word without syncope of wu-}%
+\ljudge{*}%
+\begingl
+	\gla	\rlap{I\gm{wu}siteen.} @ {} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{ʔì.\gm{wù}.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	i- wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\xx{2sg·o}- \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	\rlap{you·\xx{sg}.\xx{pfv}.s/he.see} {} {} {} {} {} //
+	\glft	‘S/he saw you (sg.).’
+		//
+\endgl
+\a\label{ex:args-obj-1pl-sync-2sg-with}%
+\exrtcmt{verb word with syncope of wu-}%
+\begingl
+	\gla	\rlap{I\gm{w}siteen.} @ {} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{ʔì\gm{w}.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	i- wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\xx{2sg·o}- \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	\rlap{you·\xx{sg}.\xx{pfv}.s/he.see} {} {} {} {} {} //
+	\glft	‘S/he saw you (sg.).’
+		//
+\endgl
+\xe
+
+Tlingit used to have a bilabial nasal sound \fm{m} /\ipa{m}/ up until the early 19th century judging by the records of spoken Tlingit from European explorers and by scattered placenames that still have \fm{m} in their borrowed English forms (e.g.\ \fm{Sumdum} for \fm{Sʼaawdáan}). By the mid-19th century most varieties of Tlingit had merged this with the existing \fm{w} /\ipa{w}/ so that \fm{m} disappeared as a separate sound. A remnant of this \fm{m} persists in some people’s occasionally nasalized pronunciations of \fm{w} as [\ipa{w̃}], particularly among Chilkat speakers. The varieties of Inland Tlingit spoken in Teslin, Tagish, and Carcross have retained the \fm{m} as a sound distinct from \fm{w}. In these varieties the consonant of the perfective prefix regularly changes from \fm{w} to \fm{m} when the perfective prefix undergoes syncope. This is illustrated in (\ref{exx:args-obj-1pl-sync-inl}) using the same verb as in (\ref{exx:args-obj-1pl-sync}). Syncope of the perfective prefix following \fm{haa=} is therefore much more obvious in most Inland varieties of Tlingit because the sound changes from /\ipa{w}/ to /\ipa{m}/.
+
+\pex\label{exx:args-obj-1pl-sync-inl}%
+\a\label{ex:args-obj-1pl-sync-inl-without}%
+\exrtcmt{verb word without syncope of wu-}%
+\begingl
+	\gla	Haa @ \rlap{\gm{wu}siteen.} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{hàː.\gm{wù}.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	haa= wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\xx{1pl·o}= \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	us= \rlap{\xx{pfv}.s/he.see} {} {} {} {} //
+	\glft	‘S/he saw us.’
+		//
+\endgl
+\a\label{ex:args-obj-1pl-sync-inl-with}%
+\exrtcmt{verb word with syncope of wu-}%
+\begingl
+	\gla	Haa @ \rlap{\gm{m}siteen.} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{hàː\gm{m}.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	haa= wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\xx{1pl·o}= \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	us= \rlap{\xx{pfv}.s/he.see} {} {} {} {} //
+	\glft	‘S/he saw us.’
+		//
+\endgl
+\xe
+
+\FIXME{Discuss similarity with possessive pronoun and direct PP pronoun. Discuss dissimilarity with independent pronoun.}
+
+\subsubsection{Second person singular}\label{sec:args-obj-2sg}
+
+The second person singular object pronoun has two forms: a prefix form \fm{i-} ‘you (sg.)’ and a proclitic form \fm{ee=} ‘you (sg.)’. The prefix \fm{i-} has a short vowel and is pronounced [\ipa{ʔì}] whereas the proclitic \fm{ee=} has a long vowel and is pronounced [\ipa{ʔìː}]. As far as we can tell there is no systematic difference in meaning or structure between these two forms; they only differ in their pronunciations and their consequent phonological interactions with surrounding material in the verb word. Some speakers use the short vowel prefix more often and others the long vowel proclitic, but there are no speakers which exclusively use one or the other. The pair of sentences in (\ref{exx:args-obj-2sg-both}) show how both forms are interchangeable.
+
+\pex\label{exx:args-obj-2sg-both}%
+\a\label{exx:args-obj-2sg-both-prefix}%
+\exrtcmt{prefix second person singular object}%
+\begingl
+	\gla	\rlap{Iwoo.óosʼ.} @ {} @ {} @ {} @ {} //
+	\glb	i- wu- i- \rt[²]{.usʼ} -μμH //
+	\glc	\xx{2sg·o}- \xx{pfv}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	\rlap{you·\xx{sg}.\xx{pfv}.s/he.wash} {} {} {} {} //
+	\glft	‘S/he washed you (sg).’
+		//
+\endgl
+\a\label{exx:args-obj-2sg-both-proclitic}%
+\exrtcmt{proclitic second person singular object}%
+\begingl
+	\gla	Ee @ \rlap{woo.óosʼ.} @ {} @ {} @ {} //
+	\glb	ee= wu- i- \rt[²]{.usʼ} -μμH //
+	\glc	\xx{2sg·o}= \xx{pfv}- \xx{stv}- \rt[²]{wash} -\xx{var} //
+	\gld	you·\xx{sg} \rlap{\xx{pfv}.s/he.wash} {} {} {} //
+	\glft	‘S/he washed you (sg).’
+		//
+\endgl
+\xe
+
+The prefix and proclitic forms of the second person singular object pronoun have different phonological behaviours as expected from their different vowel lengths. In particular, the prefix requires syncope of a following syllable in some cases where for the proclitic the syncope is optional. The forms in (\ref{exx:args-obj-2sg-pfx-syncope}) show that the prefix \fm{i-} requires syncope of the following perfective \fm{wu-}. The forms in (\ref{exx:args-obj-2sg-procl-syncope}) show that the proclitic \fm{ee=} allows but does not require syncopation.
+
+\pex\label{exx:args-obj-2sg-pfx-syncope}%
+\a\label{ex:args-obj-2sg-pfx-syncope-with}%
+\exmn{= \ref{exx:args-obj-1pl-sync-2sg}}%
+\exrtcmt{prefix i- with syncope of wu-}%
+\begingl
+	\gla	\rlap{I\gm{w}siteen.} @ {} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{ʔì\gm{w}.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	i- wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\xx{2sg·o}- \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	\rlap{you·\xx{sg}.\xx{pfv}.s/he.see} {} {} {} {} {} //
+	\glft	‘S/he saw you (sg.).’
+		//
+\endgl
+\a\label{ex:args-obj-2sg-pfx-syncope-without}%
+\exrtcmt{*prefix i- without syncope of wu-}%
+\ljudge{*}%
+\begingl
+	\gla	\rlap{I\gm{wu}siteen.} @ {} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{ʔì.\gm{wù}.sì.ˈtʰìːn}]} {} {} {} {} {} //
+	\glb	i- wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\xx{2sg·o}- \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	\rlap{you·\xx{sg}.\xx{pfv}.s/he.see} {} {} {} {} {} //
+	\glft	‘S/he saw you (sg.).’
+		//
+\endgl
+\xe
+
+\pex\label{exx:args-obj-2sg-procl-syncope}%
+\a\label{ex:args-obj-2sg-procl-syncope-with}%
+\exrtcmt{proclitic ee= with syncope of wu-}%
+\begingl
+	\gla	Ee @ \rlap{\gm{w}siteen.} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{ʔìː\gm{w}.sì.ˈtʰìːn}]} {} {} {} {} //
+	\glb	ee= wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\xx{2sg·o}= \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	you·\xx{sg} \rlap{\xx{pfv}.s/he.see} {} {} {} {} //
+	\glft	‘S/he saw you (sg.).’
+		//
+\endgl
+\a\label{ex:args-obj-2sg-procl-syncope-without}%
+\exrtcmt{proclitic ee= without syncope of wu-}%
+\begingl
+	\gla	Ee @ \rlap{\gm{wu}siteen.} @ {} @ {} @ {} @ {} //
+	\glp	\llap{[}\rlap{\ipa{ʔìː.\gm{wù}.sì.ˈtʰìːn}]} {} {} {} {} //
+	\glb	ee= wu- s- i- \rt[²]{tin} -μμL //
+	\glc	\xx{2sg·o}= \xx{pfv}- \xx{xtn}- \xx{stv}- \rt[²]{see} -\xx{var} //
+	\gld	you·\xx{sg} \rlap{\xx{pfv}.s/he.see} {} {} {} {} //
+	\glft	‘S/he saw you (sg.).’
+		//
+\endgl
+\xe
+
+Some speakers dislike the form in (\ref{ex:args-obj-2sg-procl-syncope-without}), allowing only (\ref{ex:args-obj-2sg-procl-syncope-with}) or its equivalent with \fm{m}. Such speakers therefore have the same patterns for \fm{ee=} as for \fm{i-}. This suggests that they actually have only a prefix form of this object pronoun which can vary in length between short \fm{i-} and long \fm{ee-}. There has not been enough research to confirm this, but it probably reflects two more general research questions, namely the apparently undocumented variation between affixes and clitics across Tlingit dialects and the widespread but poorly understood variation of vowel length in functional morphemes.
+
+Although there is no substantial semantic difference between the prefix \fm{i-} and the proclitic \fm{ee=}, the choice of one or the other may have implications for discourse. The details are still hazy, but the use of \fm{ee=} instead of \fm{i-} may reflect a kind of emphasis on the object, perhaps something like focus but without the use of a focus particle.
+
+\FIXME{Discuss similarity with possessive pronoun. Discuss dissimilarity with independent pronoun.}
+
+\subsubsection{Second person plural}\label{sec:args-obj-2pl}
+
+The second person plural object pronoun has two forms: a prefix form \fm{ÿi-} ‘you (pl.)’ and a proclitic form \fm{ÿee=} ‘you (pl.)’. The prefix form has a short vowel where the proclitic form has a long vowel. This pattern of nearly homophonous prefix and proclitic forms is identical to the second person singular object pronoun discussed earlier in section \ref{sec:args-obj-2pl}. As with the singular, there does not seem to be any systematic difference in meaning between the prefix and proclitic forms of the second person plural object, though there may be discourse differences. The phonological behaviour of prefix \fm{ÿi-} and proclitic \fm{ÿee=} for the plural object are also identical to those of prefix \fm{i-} and proclitic \fm{ee=} for the singular object.
+
+\FIXME{Illustrate phonology.}
+
+\FIXME{Discuss similarity with possessive pronoun. Discuss similarity with independent pronoun.}
+
+\subsubsection{Other object pronouns}\label{sec:args-obj-other}
+
+\FIXME{Other object pronouns}
+
+\FIXME{\fm{A-} is not an argument because it can cooccur with a DP}
+
+\FIXME{Table of object pronouns}
+
+\subsection{Object phrases}\label{sec:args-obj-phrs}
+
+\FIXME{What’s a DP?}
+
+\FIXME{Position of object phrases in the sentence – default SOV.}
+
+\FIXME{Possible position of object phrases elsewhere – focused object, topicalized object, right dislocated object.}
+
+\FIXME{
+Note that the phrase now follows the verb in Tlingit, and in the English translation there is a pause – represented by a comma – after the object. In this structure the phrase \fm{haa keidlí} ‘our dog’ is not an object of the verb. This phenomenon – hanging topic right dislocation – will be discussed in a future document on Tlingit syntax and information structure.}
+
+\FIXME{Minimal object phrases – bare noun, DP with determiner}
+
+\FIXME{Large object phrases – DP with relative clause}
+
+\section{Subjects}\label{sec:args-subj}
+
+\section{Obliques}\label{sec:args-obl}
+
+\stopcontents[chapters]

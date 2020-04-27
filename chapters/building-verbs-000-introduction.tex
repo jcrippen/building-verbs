@@ -1,0 +1,343 @@
+%!TEX root = ../building-verbs.tex
+%%
+%% 1. Introduction.
+%%
+
+\resetexcnt
+\chapter{Introduction}\label{ch:intro}
+
+\startcontents[chapters]
+\noindent\rule[0.5em]{\textwidth}{\heavyrulewidth}
+\printcontents[chapters]{}{1}{\setcounter{tocdepth}{2}}
+\noindent\rule{\textwidth}{\heavyrulewidth}
+\vspace{1\baselineskip}
+
+%\clearpage
+
+\FIXME{What this book is about – the grammar of the verb in Tlingit, including roots, argument structure, aspect, conjugation class, and stem variation}
+
+\FIXME{Who this book is for – intermediate learners of Tlingit who need guidance on grammar. Although no background in linguistics is assumed, some knowledge of basic linguistic concepts – e.g. sound systems, phonemes, syllables, affixes, and phrases – is very helpful. Section \ref{sec:intro-ling} sketches some necessary terminology and ideas with references to other introductory linguistic materials.}
+
+Verbs in Tlingit are complex linguistic structures that describe situations in the world around us. Although they are written as single words, Tlingit verbs are actually more like sentences in many other languages than they are like words in those languages. Compare the sentences in (\ref{exx:intro-sentence}) in each of English, French, Russian, Mandarin, Japanese, and Tlingit.
+
+\pex\label{exx:intro-sentence}%
+\a\label{ex:intro-sentence-english}%
+\exrtcmt{English sentence}%
+\begingl
+	\gla	We \rlap{grabbed} @ {} you. //
+	\glb	we grab -ed you //
+	\glc	\xx{1pl·s} grab -\xx{past} \xx{2sg·o} //
+	\glft	‘We grabbed you.’
+		//
+\endgl
+\a\label{ex:intro-sentence-french}%
+\exrtcmt{French sentence}%
+\begingl
+	\gla	On \rlap{t’a} @ {} \rlap{attrapé.} @ {} //
+	\glb	on t’= a  attrap -é //
+	\glc	\xx{1pl·s} \xx{2sg·o}= have grab -\xx{past} //
+	\glft	‘We grabbed you.’
+		//
+\endgl
+\a\label{ex:intro-sentence-russian}%
+\exrtcmt{Russian sentence}%
+\begingl
+	\glpreamble	Мы схватили тебя. //
+	\gla	My \rlap{sxvatili} @ {} @ {} @ {} tebja //
+	\glb	my s- xvati -l -i tebja //
+	\glc	\xx{1pl·s} \xx{pfv}- grab -\xx{past} -\xx{pl} \xx{2sg·o} //
+	\glft	‘We grabbed you.’
+		//
+\endgl
+\a\label{ex:intro-sentence-mandarin}%
+\exrtcmt{Mandarin sentence}%
+\begingl
+	\glpreamble	{\cnfont 我們抓住了你。} //
+	\gla	\rlap{Wǒmen} @ {} zhuā \rlap{zhùle} @ {} nǐ. //
+	\glb	wǒ -men zhuā zhù -le nǐ //
+	\glc	\xx{1} -\xx{pl} grab \xx{past} -\xx{pfv} \xx{2} //
+	\glft	‘We grabbed you.’
+		//
+\endgl
+\a\label{ex:intro-sentence-japanese}%
+\exrtcmt{Japanese sentence}%
+\begingl
+	\glpreamble	{\jpfont 私たちはあなたを掴んだ。} //
+	\gla	\rlap{Watashitachi} @ {} wa anata o \rlap{tsukanda.} @ {} //
+	\glb	watashi -tachi wa anata o tsukam -ta //
+	\glc	\xx{1} -\xx{pl} \xx{top} \xx{2} \xx{obj} grab -\xx{past} //
+	\glft	‘We grabbed you.’
+		//
+\endgl
+\a\label{ex:intro-sentence-tlingit}%
+\exrtcmt{Tlingit sentence}%
+\begingl
+	\gla	\rlap{Iwtuwasháat.} @ {} @ {} @ {} @ {} @ {} //
+	\glb	i- wu- tu- i- \rt[²]{shaʼt} -μμL //
+	\glc	\xx{2sg·o}- \xx{pfv}- \xx{1pl·s}- \xx{stv}- \rt[²]{grab} -\xx{var} //
+	\gld	\rlap{you·\xx{sg}.\xx{pfv}.we.grab} {} {} {} {} {} //
+	\glft	‘We grabbed you.’
+		//
+\endgl
+\xe
+
+All of the sentences in (\ref{exx:intro-sentence}) have multiple words in them except for the Tlingit sentence. In particular, the subject ‘we’ and object ‘you’ are separate words in every sentence except for Tlingit where they are included within the verb word. Tlingit verbs are a single unit of speech – a word – but they contain all of the information necessary to be a complete sentence. Once we realize this, it is unsurprising that they are more complex than words in languages like English, since sentence grammar in such languages is more complex than word grammar.
+
+\section{Some linguistic background}\label{sec:intro-ling}
+
+The discussion of Tlingit grammar throughout this book depends on a variety of basic linguistic concepts. This section provides a rough overview of some linguistic topics and a summary of concepts used in the rest of this book. The concepts and definitions in this section are not meant to replace an introductory linguistics textbook \parencites[e.g.][]{radford-atkinson-britain-etc:2009}{yule:2010}{anderson:2018}, but should at least be useful as a preliminary guide to a field that is largely unknown to learners of Tlingit.
+
+Linguistics is often thought of as a sort of ladder of fields of study that become increasingly abstract further up the ladder. \FIXME{Ladder figure} At the bottom of the ladder is phonetics which involves the expression and perception of speech using sound, particularly the physical mechanisms by which speech sounds are made and heard.\footnote{Not all speech involves sound – consider signed languages – and not all perception is acoustic – consider smiling or nodding. But most phonetics and phonology research emphasizes sound production and perception because sound is the primary medium for most human languages.} Phonology is the next step on the ladder, addressing how speech sounds are organized into regular systems in languages. Morphology considers how words are composed from smaller units of paired sounds and meanings. Syntax details the mechanisms by which words are combined into phrases and how these phrases then combine to form sentences. Semantics identifies the meaningful interpretation of linguistic units and how they represent things in the world of human experience and memory. Discourse studies the organization of sentences and their meanings into larger spans of speech, including the structure of monologues and conversations. This ladder metaphor is not especially accurate since there are many interconnections between each of these fields and there are different levels of abstraction throughout all of them. Nonetheless, this metaphor is conventional ideology in the field and is useful for understanding how linguists approach language phenomena. The rest of this section is organized according to this ladder metaphor, working upward from phonetics to discourse.
+
+Subsection \ref{sec:intro-ling-phon} 
+
+Subsection \ref{sec:intro-ling-morph}
+
+Subsection \ref{sec:intro-ling-synx}
+
+Subsection \ref{sec:intro-ling-sem}
+
+Subsection \ref{sec:intro-ling-disc}
+
+\subsection{Phonetics and phonology: Sounds and speech}\label{sec:intro-ling-phon}
+
+Most human languages primarily use sound as their medium of communication; we refer to these as spoken languages in contrast with signed languages that primarily use gestures as their medium. Humans can make a wide variety of sounds, but only a limited number are used for language. For example, although we can clap our hands or stomp our feet to make noise, neither of these kinds of sound are used by any human language. A \term{speech sound} is a sound that humans can make with the vocal tract and that is used as a regular building block of a spoken language. The vocal tract includes the mouth (lips, teeth, tongue, palate), the nasal cavity, the space behind the mouth (uvula, pharynx), and the upper airway (trachea, larynx, epiglottis). Like all other sounds, speech sounds are perceived with the ear. But speech sounds are processed in the brain differently from other sounds using specialized pathways that are dedicated to language, so there is a biological justification for treating the perception of speech sounds separately from all other kinds of acoustic perception. Speech sounds can be studied in terms of their acoustic properties (acoustic phonetics) and in terms of the anatomy used to articulate them (articulatory phonetics).
+
+Speech sounds are transitory: they disappear once the sound fades away. For permanence, speech sounds can be represented in writing using transcription systems. A \term{transcription system} is a writing system that represents every speech sound distinctly and unambiguously from all others. The most widely used transcription system is the International Phonetic Alphabet (IPA) which will be used throughout this book. There are many guides online for learning the IPA, but there is only one official reference from the International Phonetic Association \parencite{international-phonetic-association:2018} along with an official handbook discussing its history, design, and use \parencite{international-phonetic-association:1999}. Some symbols in the IPA look like ordinary English letters but they are pronounced differently. For example, the IPA symbol [\ipa{j}] represents the initial consonant in \fm{yes} and \fm{young} like in German \fm{ja} ‘yes’, and the IPA sound [\ipa{i}] reprensets the vowel in \fm{beet} and \fm{mean} like in Spanish \fm{si} ‘yes’. Other IPA symbols are never used in English writing such as [\ipa{ʃ}] for the initial consonant in \fm{sheet}, [\ipa{æ}] for the vowel in \fm{bat}, and [\ipa{ɹ}] for the initial consonant in \fm{read}. Each IPA symbol represents only one sound, so that [\ipa{s}] only stands for the consonants in \fm{sis} and is never pronounced like the \fm{s} in \fm{easy} (IPA [\ipa{ˈi.zi}]) or \fm{pleasure} (IPA [\ipa{ˈplɛ.ʒəɹ}]). This ‘one sound one symbol’ principle is a key property of transcription systems that differentiates them from most other kinds of writing systems, an issue we will return to at the end of this section.
+
+Although the IPA could be mistaken for an ‘alphabet’, it is not organized by any kind of alphabetic order. Instead the IPA is organized according to articulatory phonetics, specifically the places and manners used to produce speech sounds. The \term{place of articulation} for a speech sound is the location within the vocal tract that the sound is produced. For example, a dental sound is produced at the dental place (teeth) and a glottal sound is produced at the glottal place (the opening of the larynx). The \term{manner of articulation} for a speech sound is the motion of the body part and the resulting amount of obstruction in the vocal tract. For example, a stop\footnote{The official term is ‘plosive’, but the term ‘stop’ is used by most English-speaking linguists.} involves motion of a body part like the tongue tip so that the vocal tract is completely obstructed (stopped), and a fricative involves partial obstruction of the vocal tract so that the passage of air is turbulent. Thus at the velar place we can have a stop like [\ipa{ɡ}] in English \fm{goof} [\ipa{ɡuf}] with complete closure or a fricative like [\ipa{x}] in Tlingit \fm{xáatl} [\ipa{xáːtɬ}] ‘iceberg’ with partial closure and thus a turbulent hissing noise.
+
+There are additional secondary articulations which can be added onto the primary manner of articulation. Three examples of secondary articulations are labialization, aspiration, and ejectivity, all of which are employed in Tlingit. The \term{labialized} articulation involves the rounding of the lips in addition to the production of some basic sound; labialization of the initial velar fricative distinguishes \fm{xeitl} [\ipa{\gm{x}èːtɬ}] ‘thunder’ from \fm{xweitl} [\ipa{\gm{xʷ}èːtɬ}] ‘fatigue’. The \term{aspirated} articulation is a voiceless burst of air following the production of a sound; aspiration of the initial alveolar stop distinguishes \fm{dáanaa} [\ipa{ˈ\gm{t}áː.nàː}] ‘dollar, money, silver’ from \fm{táanaa} [\ipa{ˈ\gm{tʰ}áː.nàː}] ‘devilfish spear’.\footnote{You may have been told that the sound \fm{d} in Tlingit is ‘voiced’ and the sound \fm{t} is ‘unvoiced’, but this is incorrect. Although English has a contrast in voicing as a secondary manner of articulation for consonants, Tlingit does not. The symbols \fm{d} for [\ipa{t}] and \fm{t} for [\ipa{tʰ}] are borrowed from English but in Tlingit they represent unaspirated and aspirated sounds rather than voiced and unvoiced sounds. Tlingit does have voiced consonants like \fm{y} [\ipa{j}] and \fm{n} [\ipa{n}] but these do not contrast with any voiceless counterparts.} The \term{ejective} articulation is a burst of air created by closing the oral cavity and the glottis (the opening of the larynx) and then moving the larynx up like a piston compressing the air in the oral cavity. The higher air pressure from this compression creates a louder sound with much more turbulence. Ejectivity is the only contrast between \fm{tʼaaw} [\ipa{\gm{tʼ}àːw}] ‘feather’ and \fm{daaw} [\ipa{\gm{t}àːw}] ‘broad kelp’. A \term{minimal pair} is a pair of words in a language that differ in only one sound, and each of the preceding contrasts was illustrated with a minimal pair. Larger sets of nearly identical words include a minimal triplet like \fm{g̱aat} [\ipa{qàːt}] ‘sockeye’, \fm{g̱aaḵ} [\ipa{qàːq}] ‘lynx’, and \fm{g̱aax̱} [\ipa{qàːχ}] ‘crying’ and a minimal quintuplet like \fm{shaa} [\ipa{ʃàː}] ‘mountain’, \fm{shaax̱} [\ipa{ʃàːχ}] ‘grey currant’, \fm{shaaḵ} [\ipa{ʃàːq}] ‘driftlog’, \fm{shaaw} [\ipa{ʃàːw}] ‘gumboot’, \fm{shaan} [\ipa{ʃàːn}] ‘old age’.
+
+Vowels are treated somewhat differently from consonants because the obstruction of the vocal tract in vowels is minor. Instead vowels are described in terms of the position of the tongue. Two axes of movement are important: the high/low axis and the front/back axis. On the high/low axis the tongue can be bunched up toward the roof of the mouth to give a \term{high vowel} like like [\ipa{i}] in \fm{see} or [\ipa{u}] in \fm{goon}. In the opposite direction, the tongue can be relaxed down toward the jaw to give a \term{low vowel} like [\ipa{æ}] in \fm{cat} or [\ipa{ɑ}] in \fm{gone}. Along the front/back axis the tongue can be pushed forward toward the teeth to give a \term{front vowel} like [\ipa{i}] in \fm{see} or [\ipa{æ}] in \fm{cat}. In the opposite direction, the tongue can be pulled back toward the throat to give a \term{back vowel} like [\ipa{u}] in \fm{goon} or [\ipa{ɑ}] in \fm{gone}. Both axes are used to determine a particular vowel, so the [\ipa{i}] in \fm{see} is a high front vowel and the [\ipa{ɑ}] in \fm{gone} is a low back vowel.
+
+Just as consonants may have secondary articulations, so too may vowels. Two such articulations used in Tlingit are length and tone. The term \term{vowel length} refers to the relative amount of time during which a vowel is pronounced. Vowel length is usually a contrast between ‘short’ and ‘long’, with short vowels taken as the default. An example of a length contrast in Tlingit is the short vowel in \fm{tʼá} [\ipa{tʼá}] ‘king salmon’ versus the long vowel in \fm{tʼáa} [\ipa{tʼáː}] ‘board’. The IPA convention for representing a long vowel is the addition of a triangular colon \ipa{ː} after a symbol for a short vowel. The \term{mora} is the basic unit of length in a language. This term is borrowed from Latin \fm{mora} ‘delay, interval of time’ and a mora is represented symbolically with the lowercase Greek letter μ ‘mu’. A short vowel counts for one mora where a long vowel counts for two moras, so we speak of a short vowel as a monomoraic unit μ and a long vowel as a bimoraic unit μμ.
+
+The \term{pitch} of a voice is the fundamental frequency (\!\Fzero) at which the larynx vibrates when a speaker produces a voiced sound. Some languages such as Mandarin, Yoruba, and Tlingit use pitch to differentiate otherwise identical (homophonous) words. The term \term{tone} refers to this regular use of pitch to distinguish  homophonous words. Like length, tone functions as an additional articulation that is present with every vowel. Some languages contrast several different tones, including contour tones where the pitch changes in various directions. Most dialects of Tlingit contrast only two tones, low and high\footnote{The Southern dialect of Tlingit – including the Sanya variety spoken around Ketchikan and the Henya variety spoken around Klawock – has an additional falling ‘HL’ tone which can occur on long vowels.}  An example of this tone contrast in Tlingit is the low tone \fm{taay} [\ipa{tʰàːj}] ‘fat’ versus the high tone \fm{táay} [\ipa{tʰáːj}] ‘garden, field’. The IPA convention for representing low tone is a grave accent \ipa{ˋ} over a vowel, and for high tone it is an acute accent \ipa{ˊ} over a vowel. Low tone can be represented on its own with ‘L’ and high tone similarly with ‘H’.
+
+Vowels are most often produced using only the oral cavity, so that no air passes through the nasal cavity. A \term{nasalized} vowel is one produced with the nasal cavity open in addition to the oral cavity. Nasalization of vowels typically occurs automatically when the vowel precedes a nasal consonant like [\ipa{m}] or [\ipa{ŋ}]. This anticipatory nasalization can be heard by pronouncing the word \fm{sing} in English which is usually pronounced [\ipa{sɪ̃ŋ}] with a nasalized vowel [\ipa{ɪ̃}]. Languages can use nasalized vowels to distinguish words, as for example French \fm{nos} [\ipa{no}] ‘our pl.’\ versus \fm{non} [\ipa{nõ}] ‘no’. Tlingit does not regularly use nasalization of vowels, but speakers of some dialects include nasalization where others lack it. Neighbouring Dene languages like Kaska and Southern Tutchone contrast plain and nasalized vowels.
+
+No language uses every speech sound; each language has a limited inventory of sounds selected from all of the speech sounds available. A \term{phoneme} is a particular speech sound used regularly in a particular language, and so a particular sound may or may not be ‘phonemic’ in a given language. For example, since \fm{tléixʼ} [\ipa{tɬʰéːxʼ}] ‘one’ and \fm{tléikʼ} [\ipa{tɬʰéːkʼ}] ‘no’ have distinct final consonants [\ipa{xʼ}] and [\ipa{kʼ}] and since the meanings of these two words are clearly different, we can say that [\ipa{xʼ}] and [\ipa{kʼ}] are phonemically distinct in Tlingit. Phonemes can be distinguished from other speech sounds by writing them in slashes, so /\ipa{xʼ}/ and /\ipa{kʼ}/ are phonemes in Tlingit. Tlingit has four phonemic vowels /\ipa{i}, \ipa{e}, \ipa{a}, \ipa{u}/ with additional phonemic length and tone distinctions as shown in table \ref{tab:intro-ling-phon-vowels} (p.\ \pageref{tab:intro-ling-phon-vowels}). Tlingit’s inventory of consonant phonemes is much larger as shown in table \ref{tab:intro-ling-phon-consonants} (p.\ \pageref{tab:intro-ling-phon-consonants}). Both tables are detailed later in this section.
+
+Languages may use speech sounds that are not phonemic. For example, in English nasal vowels are not phonemic so there is no contrast between \fm{no} [\ipa{no}] and a hypothetical \fm[*]{non} [\ipa{nõ}] because the latter is not possible. This does not preclude the existince of nasal vowels like in \fm{sing} [\ipa{sɪ̃ŋ}], but crucially the vowel phoneme is still /\ipa{ɪ}/ which is affected by spread of nasalization from the following /\ipa{ŋ}/. In Tlingit the same distinction applies in a word like \fm{ánkʼw} /\ipa{ʔánkʼʷ}/ ‘brat’ which is usually pronounced [\ipa{ʔáŋkʼʷ}] with a velar nasal [\ipa{ŋ}] that anticipates the following labialized ejective velar stop /\ipa{kʼʷ}/. Just because [\ipa{ŋ}] occurs does not mean that it is phonemic; there is no contrast between e.g.\ \fm{yán} /\ipa{ján}/ ‘hemlock tree’ and a hypothetical word like \fm[*]{yáng} /\ipa{jáŋ}/.
+
+A \term{syllable} is a combination of phonemes into a minimal rhythmic unit of speech. A syllable is usually formed around a vowel called the \term{nucleus} along with some number of consonants that precede and/or follow this nucleus. The \term{onset} is the set of phonemes that precede the nucleus; Tlingit requires that every syllable have at least one consonant in the onset. As an example, the word \fm{shaa} [\ipa{ʃàː}] ‘mountain’ is a single syllable with the postalveolar fricative [\ipa{ʃ}] as its onset and the low back long low tone vowel [\ipa{àː}] as its nucleus. The \term{coda} is the set of phonemes that follow the nucleus, from Italian \fm{coda} ‘tail’. In Tlingit a syllable may or may not have a coda, so for example the monosyllabic word \fm{shaa} [\ipa{ʃàː}] ‘mountain’ lacks a coda. In contrast the word \fm{ḵaax̱} [\ipa{qʰàːχ}] ‘merganser’ is a single syllable with an aspirated uvular stop [\ipa{qʰ}] in its onset, a low back long low tone vowel [\ipa{àː}] as its nucleus, and a uvular fricative [\ipa{χ}] in its coda. The nucleus and coda are sometimes taken together as a single unit called the \term{rime} which is the basis of rhyming in European traditions of poetry. Syllables have a hierarchical structure that can be represented as a tree. The example in (\ref{ex:intro-ling-phon-syllable}) shows this structure for the Tlingit word \fm{g̱áx̱} [\ipa{qáχ}] ‘rabbit’ where the unaspirated uvular stop /\ipa{q}/ is the onset, the low back short high tone vowel /\ipa{á}/ is the nucleus, and the uvular fricative /\ipa{χ}/ is the coda.
+
+\ex\label{ex:intro-ling-phon-syllable}%
+%\tikzexsetup%
+\begin{tikzpicture}[baseline=(s.base)]
+\matrix [matrix of nodes, row sep=1em, column sep={4em,between origins}]
+{			& |(s)| syllable		&				&	&\\
+|(O)| onset	&				& |(R)| rime		&	&\\
+			& |(N)| nucleus		& |(C)| coda		&	&\\
+|(oc)| C		& |(v)| V			& |(cc)| C			&	&\\
+|(gh)| /\ipa{q}/	& |(a)| /\ipa{á}/		& |(xh)| /\ipa{χ}/	& →	& {}[\ipa{qáχ}] ‘rabbit’\\
+};
+\draw \foreach \x in {O, R} {(s.south) -- (\x.north)};
+\draw \foreach \x in {N, C} {(R.south) -- (\x.north)};
+\draw (O.south) -- (oc.north);
+\draw (N.south) -- (v.north);
+\draw (C.south) -- (cc.north);
+\draw (oc.south) -- (gh.north);
+\draw (v.south) -- (a.north);
+\draw (cc.south) -- (xh.north);
+\end{tikzpicture}
+\xe
+
+A \term{simple} onset or coda is one that contains only a single consonant. When an onset or coda contains more than one consonant it is called \term{complex}. The classic example of a complex onset and a complex coda in English is the monosyllabic word \fm{strengths} [\ipa{stɹɛŋkθs}]. This syllable has an onset of three consonants [\ipa{s}], [\ipa{t}], and [\ipa{ɹ}] and a coda of four consonants [\ipa{ŋ}], [\ipa{k}], [\ipa{θ}], and [\ipa{s}]. A similar example in Tlingit is \fm{chx̱ánkʼ} [\ipa{tʃʰχánkʼ}] ‘grandchild’ which has an onset with an aspirated postalveolar affricate [\ipa{tʃʰ}] and a uvular fricative [\ipa{χ}] and a coda with a postalveolar nasal [\ipa{n}] and an ejective velar stop [\ipa{kʼ}].
+
+\begin{table}
+\centerfloat
+\setlength{\tabcolsep}{0.75ex}
+\let\–\omit
+\DeclareDocumentCommand{\rotlbl}{m}{\begin{turn}{90}#1\end{turn}}
+\begin{tabular}{l@{\hspace{1em}}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}@{\hspace{1.5em}}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}@{\hspace{1.5em}}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}@{\hspace{1.5em}}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}}
+\toprule
+	&\multicolumn{8}{c}{short vowel}		&\multicolumn{8}{c}{long vowel}\\
+	\cmidrule(r){2-9}					\cmidrule(r){10-17}
+	&\multicolumn{4}{c}{low tone}
+					&\multicolumn{4}{c}{high tone}
+									&\multicolumn{4}{c}{low tone}
+													&\multicolumn{4}{c}{high tone}\\
+	\cmidrule(lr){2-5}	\cmidrule(lr){6-9}	\cmidrule(lr){10-14}	\cmidrule(lr){15-17}
+	&\multicolumn{2}{c}{front}
+			&\multicolumn{2}{c}{back}
+					&\multicolumn{2}{c}{front}
+							&\multicolumn{2}{c}{back}
+									&\multicolumn{2}{c}{front}
+											&\multicolumn{2}{c}{back}
+													&\multicolumn{2}{c}{front}
+															&\multicolumn{2}{c}{back}\\
+\midrule
+high	& i	& ì	& u	& ù	& í	& í	& ú	& ú	& ee	& ìː	& oo	& ùː	& ée	& íː	& óo	& úː\\
+mid	& e	& è	&	&\–	& é	& é	&	&\–	& ei	& èː	&	&\–	& éi	& éː	&	&\–\\
+low	&	&\–	& a	& à	&	&\–	& á	& á	&	&\–	& aa	& àː	&	&\–	& áa	& áː\\
+\bottomrule
+\end{tabular}
+\caption{Tlingit vowels in orthography and IPA}
+\label{tab:intro-ling-phon-vowels}
+\end{table}
+
+\begin{sidewaystable}
+\centerfloat
+\setlength{\tabcolsep}{0.75ex}
+\let\–\omit
+\DeclareDocumentCommand{\rotlbl}{m}{\begin{turn}{90}#1\end{turn}}
+\begin{tabular}{l@{\hspace{1ex}}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}
+			>{\upshape}c<{\upshape}@{\hspace{0.5ex}}>{/\ipafont}c<{\normalfont/}}
+\toprule
+			&\multicolumn{2}{c}{\rotlbl{labial}}
+						&\multicolumn{2}{c}{\rotlbl{alveolar}}
+									&\multicolumn{2}{c}{\rotlbl{postalveolar}}
+												&\multicolumn{2}{c}{\rotlbl{lateral}}
+														&\multicolumn{2}{c}{\rotlbl{palatal}}
+			&\multicolumn{2}{c}{\rotlbl{velar}}
+						&\multicolumn{2}{c}{\rotlbl{labial velar}}
+									&\multicolumn{2}{c}{\rotlbl{uvular}}
+												&\multicolumn{2}{c}{\rotlbl{labial uvular}}													&\multicolumn{2}{c}{\rotlbl{glottal}}
+												&\multicolumn{2}{c}{\rotlbl{labial glottal}}\\
+\midrule
+unaspirated stop
+			& b\~p	& p	& d\~t	& t	&		&\–	&		&\–	&	&\–
+			& g\~k	& k	&gw\~kw	& kʷ	& g̱\~ḵ	& q	& g̱w\~ḵw	& qʷ	& .	& ʔ	& .w	& ʔʷ \\
+aspirated stop	& p		& pʰ	& t		& tʰ	&		&\–	&		&\–	&	&\–
+			& k		& kʰ	& kw		& kʰʷ	& ḵ		& qʰ	& ḵw		& qʰʷ	&	&\–	&	&\–\\
+ejective stop	& 		&\–	& tʼ		& tʼ	&		&\–	&		&\–	&	&\–
+			& kʼ		& kʼ	& kʼw	& kʼʷ	& ḵ'		& qʼ	& ḵʼw	& qʼʷ	&	&\–	&	&\–\\
+nasal		& m		& m	& n		& n	&		&\–	&		&\–	&	&\–
+			&		&\–	&		&\–	&		&\–	&		&\–	&	&\–	&	&\–\\
+plain fricative	&		&\–	& s		& s	& sh		& ʃ	& l		& ɬ	&	&\–
+			& x		& x	& xw		& xʷ	& x̱		& χ	& x̱w		& χʷ	& h	& h	& hw	& hʷ\\
+ejective fricative
+			&		&\–	& sʼ		& sʼ	&		&\–	& lʼ		& ɬʼ	&	&\–
+			& xʼ		& xʼ	& xʼw	& xʼʷ	& x̱ʼ		& χʼ	& x̱ʼw	& χʼʷ	&	&\–	&	&\–\\
+unaspirated affricate
+			&		&\–	& dz\~ts	& ts	& j		& tʃ	& dl\~tl	& tɬ	&	&\–
+			&		&\–	&		&\–	&		&\–	&		&\–	&	&\–	&	&\–\\
+aspirated affricate
+			&		&\–	& ts		& tsʰ	& ch		& tʃʰ	& tl		& tɬʰ	&	&\–
+			&		&\–	&		&\–	&		&\–	&		&\–	&	&\–	&	&\–\\
+ejective affricate
+			&		&\–	& tsʼ		& tsʼ	& chʼ		& tʃʼ	& tlʼ		& tɬʼ	&	&\–
+			&		&\–	&		&\–	&		&\–	&		&\–	&	&\–	&	&\–\\
+approximant	&		&\–	& 		&\– 	&		&\– 	& ḻ		& l	& y	& j
+			& ÿ		& ɰ	& w		& w	&		&\–	&		&\–	&	&\–	&	&\–\\
+\bottomrule
+\end{tabular}
+\caption{Tlingit consonants in orthography and IPA}
+\label{tab:intro-ling-phon-consonants}
+\end{sidewaystable}
+
+With the concept of a syllable in place we can return to the idea of transcription systems and how they differ from other methods of writing language. Tlingit is written with an \term{orthography} which is a writing system and some associated conventions involving spelling, capitalization, word-breaking, and punctuation. The orthography for Tlingit is roughly phonemic in that a single symbol like \fm{sh} or \fm{x̱ʼ} generally represents a single sound.\footnote{Note that ‘letter’ ≠ ‘symbol’. The symbol \fm{sh} has two letters \fm{s} and \fm{h} that together represent a single phoneme /\ipa{ʃ}/.} But there are a number of exceptions where a single symbol represents more than one sound, most notably involving unaspirated stops and affricates in syllable codas. This can be seen in table \ref{tab:intro-ling-phon-consonants} that lists the consonant phonemes in Tlingit. Most consonants in table \ref{tab:intro-ling-phon-consonants} have a single orthographic symbol followed by a single phoneme in slashes. But the unaspirated stops like /\ipa{t}/ and /\ipa{k}/ and the unaspirated affricates like /\ipa{tʃ}/ and /\ipa{tɬ}/ have two orthographic symbols separated by a tilde \~, for example \fm{d\~t} for /\ipa{t}/. This is because the orthography represents the same sound differently depending on whether it is in the onset or the coda.
+
+\FIXME{examples, reference to Maddieson et al.}
+\FIXME{lack of distinct vowel symbols without implied tone and length}
+
+\subsection{Morphology: Words and their parts}\label{sec:intro-ling-morph}
+
+\FIXME{morpheme}
+
+A \term{root} is an abstract unit that cannot be divided into other morphemes.
+
+An \term{affix} is a morphological unit (a morpheme) that always occurs attached to some other morphological unit so that they form a phonological unit \parencite[9]{booij:2007}. Affixes are generally small, consisting of only one or two consonants or vowels, and they usually have an abstract meaning or a special grammatical function. Affixes come in several flavors depending on how they attach to their host. A \term{prefix} is an affix that attaches to the beginning of the host and so precedes it. A \term{suffix} is an affix that attaches to the end of the host and so follows it. There are other flavours of affix including ‘infix’ and ‘circumfix’ but they are not important for the analysis of Tlingit. When we segment an affix in a morphological analysis we indicate the boundary between the affix and host with a hyphen ‘-’ like in the English word \fm{anti-dis-establish-ment-arian-ism}. Prefixes alone are represented with a hyphen following them – e.g.\ \fm{a-}, \fm{bc-}, and \fm{def-} – and suffixes alone are represented with a hyphen following them – e.g.\ \fm{-u}, \fm{-vw}, and \fm{-xyz}.
+
+A \term{clitic} is a morpheme that is somewhat like an affix but also like an independent word \parencite[166]{booij:2007}. Clitics have the flavour of independent words but they cannot exist on their own and instead require a host to support them. The term ‘clitic’ is from Greek ἐγκλιτικός \fm{eŋklitikós} ‘leaning on’ because clitics can be thought of as words that lean on other words for support. There are two kinds of clitics depending on where they occur with respect to their host: proclitics and enclitics. A \term{proclitic} is a clitic that occurs before the host and so precedes it; proclitics are analogous to prefixes. An \term{enclitic} is a clitic that occurs after the host and so follows it; enclitics are analogous to suffixes. When we segment a clitic in a morphological analysis we indicate the boundary between clitic and host with an equals sign ‘=’; think of this as meaning that the separation is more than ‘-’. Proclitics alone have the equals sign after the proclitic – e.g.\ \fm{a=}, \fm{bc=}, and \fm{def=} – and enclitics alone have the equals sign before the enclitic – e.g.\ \fm{=u}, \fm{=vw}, and \fm{=xyz}. An example of a proclitic is the French second person object \fm{t’=} ‘you’ in (\ref{ex:arg+val-args-obj-prons-nontl-clitics-pro}). An example of an enclitic is the English verb form \fm{=’m} ‘am’ as in (\ref{ex:arg+val-args-obj-nontl-prons-clitics-en}).
+
+\pex\label{exx:arg+val-args-obj-prons-nontl-clitics}%
+\a\label{ex:arg+val-args-obj-prons-nontl-clitics-pro}%
+\exrtcmt{proclitic in French}%
+\begingl
+	\gla	Je \rlap{\gm{t’}aime.} @ {} //
+	\glb	je \gm{t’}= aime //
+	\glc	\xx{1sg·s} \gm{\xx{2sg·o}}= love.\xx{pres}.\xx{1/3sg} //
+	\glft	‘I love you.’
+		//
+\endgl
+\a\label{ex:arg+val-args-obj-nontl-prons-clitics-en}%
+\exrtcmt{enclitic in English}%
+\begingl
+	\gla	\rlap{I\gm{’m}} @ {} hungry. //
+	\glb	I =\gm{’m} hungry //
+	\glc	\xx{1sg·s} =\gm{be.\xx{pres}.\xx{1sg}} hungry //
+	\glft	‘I am hungry.’
+		//
+\endgl
+\xe
+
+\subsection{Syntax: Heads and phrases}\label{sec:intro-ling-synx}
+
+\FIXME{category – noun, verb, adposition, etc.}
+
+\FIXME{phrase}
+
+\FIXME{head}
+
+\FIXME{complement}
+
+\FIXME{argument}
+
+\FIXME{adjunct}
+
+\FIXME{clause}
+
+\subsection{Semantics: Things and happenings}\label{sec:intro-ling-sem}
+
+\FIXME{Connection between syntax and semantics. Mapping between language and reality.}
+
+The field of \term{metaphysics} is a branch of philosophy concerned with the nature of reality and how we carve up the world – or what we believe to be the world based on our perception and experiences – into various  categories and phenomena \parencite{van-inwagen-sullivan:2015}.\footnote{The name ‘metaphysics’ is from Aristotle’s Μετὰ τὰ φυσικά \fm{Metà tà physiká} ‘Aside/after the physical’ which is a collection of works following his Τὰ φυσικά \fm{Tà physiká} ‘The physical’ that discusses natural phenomena. Both names ultimately come from the Greek adjective φυσικός \fm{physikós} ‘natural, physical’.} Metaphysics studies the questions of what the world is and what it means to us, including how we define existence, identity, change, and causation. In popular use the term ‘metaphysics’ is often applied to mystical phenomena, but in philosophy and linguistics it is used specifically for the study of fundamental principles and concepts of being.
+
+Within the vast field of metaphysics we specifically need to look at \term{ontology} which is essentially the study of categorization.\footnote{The term ‘ontology’ is from Greek ὤν \fm{ṓn} ‘is; actual’ and λόγος \fm{lógos} ‘word, speech, reason, account’. The form ὤν \fm{ṓn} is the present participle of εἰμί \fm{eimí} ‘be, exist, happen’ from Proto-Indo-European \fm[*]{h₁ésmi} ‘I am’. Compare Sanskrit \fm{sát} ‘being, essence’, Old English \fm{sōþ} ‘sooth, truth, real’.} To understand how verbs describe the world we need on the one hand an ontology of things in the world and on the other hand an ontology of things in the language. We can think of semantics as a kind of ontology of the world and syntax as a kind of ontology of the language  \parencites{montague:1969}. Then what we are after is a comparison of Tlingit semantics and Tlingit syntax: meaning and form. We will use linguistic terminology to precisely identify elements of Tlingit syntax and we will use metaphysical terminology to precisely identify elements of Tlingit semantics.
+
+An \term{entity} is anything that can be treated like an individual unit, such as a tree, me, or the sky.\footnote{Linguists usually use the term ‘entity’ but the same concept appears in philosophy under other labels like ‘thing’, ‘being’, ‘item’, ‘existent’, or ‘object’ \parencite{rettler-bailey:2017}.} Typical entities are concrete: they are agglomerations of physical material that interact with the world as a unique individual \parencite{rettler-bailey:2017}. Concrete entities may be divisible into component parts as how a human is made of arms, legs, a head, and a torso, or they may be composed of continuous substances as how a sea is composed of water; this is the distinction between ‘count’ and ‘mass’ \parencites{steen:2016}{nicolas:2018}.\footnote{The idea of a ‘part’ has its own field of study called mereology \parencite{varzi:2019} which we will need to draw upon in looking at things like partitive pronouns, possession, and plurality.} Entities can also be abstract, in which case they are not thought of as having any kind of physical makeup \parencite{rosen:2020}. Concepts like friendship and absence are kinds of abstract entities, as are sets of concrete entities like ‘all dogs that have ever existed’. Like many metaphysical issues, the division between concrete and abstract entities is endlessly debatable, as is the validity of ‘entity’ as a coherent concept itself \parencites{casati:2004}{rettler-bailey:2017}{rosen:2020}. We will take the concept of an entity to be given, assuming that it is roughly equivalent the meanings of ‘thing’ and ‘being’. In English the question word \fm{what} generally corresponds to an entity, and similarly in Tlingit the question word \fm{daa} ‘what’ also usually corresponds to an entity. There is a special case for human entities where we use the question word \fm{who} in English and \fm{aa} or \fm{aadóo} ‘who’ in Tlingit.
+
+A \term{location} is any point or area that can be treated like an individual unit in space, for example Sitka, outside, or the centre of the Earth. A location can be treated as a special kind of entity \parencite{gilmore:2018}, but Tlingit has different grammatical structures for them so it is convenient for us to think of locations and entities as distinct. Delineating a particular location in a rigorous way can be very complex because it involves fundamental decisions about how space should be modelled \parencites{pederson:2012}{landau:2012}{gilmore:2018}. Added to this is the problem of abstract locations: like entities, locations can be abstractions such as ‘in the past’ or ‘in my opinion’, and fitting these abstractions into a coherent model of space is profoundly difficult. We will take the concept of a location as given. In English the question word \fm{where} generally corresponds to a location, and similarly in Tlingit the question word \fm{goo} ‘where’ usually corresponds to a location.
+
+An \term{eventuality} is a situation or occurrence in space and time, a ‘thing that happens’ or a ‘way that it is’.\footnote{Like entities, eventualities are discussed under a variety of other labels including ‘situation’ \parencites{binnick:1991}{smith:1997}{kratzer:2019}. A related term ‘state of affairs’ can include eventualities along with entities and times \parencites{binnick:1991}{textor:2016}{kratzer:2019}.} Eventualities will be defined in more detail in chapter \ref{ch:asp}, but for now they can be thought of as the ‘happening’ described by a verb. Whenever something happens, the happening includes entities that are inolved in or affected by it and also locations where the happening takes place. Each verb describes a different kind of eventuality, and each kind of eventuality naturally includes some typical number of entities and/or locations. Thus verbs require arguments which describe these entities and locations.
+
+Eventualities can be divided into a different types depending on how they happen, whether they take up time, whether they have a distinct ending, and many other properties which we will address later. One basic subdivision of eventualities is \emph{event} versus \emph{state} which depends on the presence or absence of change \parencites{bach:1986}{higginbotham:2000}{maienborn:2011}{zucchi:2015}. Put simply, an \term{event} is a dynamic, changing eventuality where the world becomes different as compared to some time before the event. Typical examples of events are ‘eat’, ‘go’, and ‘hit’. Contrasting with an event, a \term{state} is a static, unchanging eventuality in the world. States are often properties of some entity. Typical examples of states are ‘exist’, ‘want’, and ‘be tall’.  See chapter \ref{ch:asp} for further details on eventualities, events, states, and the various properties and subtypes of each.
+
+Although we usually talk about entities, locations, and eventualities that are real, we can also refer to ones that do not exist. Nonexistent entities include things like an invisible pink unicorn or the king of the United States. Nonexistent locations include places like Middle Earth, Gotham City, and on top of an invisible pink unicorn. Nonexistent eventualities include phenomena like me swimming on the moon last year, the rising of the sun in the east every Tuesday, and how tall the king of the United States is. The ability to discuss nonexistent entities, locations, and eventualities is a key property of human languages that sets them apart from all other forms of communication among animals \parencite{hockett:1960}.
+
+\FIXME{encyclopedic knowledge}
+
+\FIXME{pragmatics}
+
+\subsection{Discourse: Speech and interaction}\label{sec:intro-ling-disc}
+
+\FIXME{context}
+
+\FIXME{speaker versus interlocutor, listener, audience}
+
+\FIXME{question and answer}
+
+\FIXME{information structure: focus, topic, given}
+
+\FIXME{conversation}
+
+\FIXME{monologue}
+
+\FIXME{genre: narrative, oratory, lecture, procedure, proverb/saying, lyric, etc.}
+
+\FIXME{illocutionary force}
+
+\FIXME{speech act}
+
+\stopcontents[chapters]

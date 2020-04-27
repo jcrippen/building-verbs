@@ -1,0 +1,159 @@
+%!TEX root = ../building-verbs.tex
+%%
+%% Indexing and glossary support.
+%%
+
+%% Indicate calls to index commands in the typeset output.
+%%
+%% NOTE: This package must be loaded before imakeidx.
+\usepackage{showidx}
+
+%% Modify the \showindexmarks formatting.
+\indexmarkstyle{\normalfont\miniscule\ttfamily}
+
+%% Build indices concurrently with typesetting using \write18.
+\usepackage[noautomatic]{imakeidx}
+
+%%%%
+%%%% Index configuration.
+%%%%
+
+%% Index declarations.
+\makeindex[name=subjects, title={Index of subjects}, columns=2]
+\makeindex[name=places, title={Index of placenames}, columns=2]
+\makeindex[name=people, title={Index of personal names}, columns=2]
+\makeindex[name=languages, title={Index of languages}, columns=2, program=texindy]
+\makeindex[name=research, title={Index of research topics}, columns=1]
+
+%% Mid-level commands for adding index entries.
+%%
+%% The low level command is \index but it's too primitive, so we replace it
+%% with some specialized commands here. There should be one command
+%% defined below for each index declared above.
+\ProvideDocumentCommand \subjectindex { >{\TrimSpaces}m } {\index[subjects]{#1}}
+\ProvideDocumentCommand \placeindex { >{\TrimSpaces}m } {\index[places]{#1}}
+\ProvideDocumentCommand \peopleindex { >{\TrimSpaces}m } {\index[people]{#1}}
+\ProvideDocumentCommand \languageindex { >{\TrimSpaces}m } {\index[languages]{#1}}
+\ProvideDocumentCommand \researchindex { >{\TrimSpaces}m } {\index[research]{#1}}
+%% These are equivalents but add |indexprimary to emphasize the page number.
+\ProvideDocumentCommand \subjectindexp { >{\TrimSpaces}m } {\index[subjects]{#1|indexprimary}}
+\ProvideDocumentCommand \placeindexp { >{\TrimSpaces}m } {\index[places]{#1|indexprimary}}
+\ProvideDocumentCommand \peopleindexp { >{\TrimSpaces}m } {\index[people]{#1|indexprimary}}
+\ProvideDocumentCommand \languageindexp { >{\TrimSpaces}m } {\index[languages]{#1|indexprimary}}
+\ProvideDocumentCommand \researchindexp { >{\TrimSpaces}m } {\index[research]{#1|indexprimary}}
+
+
+%% High-level commands for adding index entries.
+%%
+%% These commands take a list of index entries and add them to the appropriate
+%% index. They are suitable for use in the body where an index entry is not otherwise
+%% added by some formatting or data handling command like \term.
+\ProvideDocumentCommand \SubjectIndex { >{\SplitList{;}}m } {\ProcessList{#1}{\subjectindex}}
+\ProvideDocumentCommand \PlaceIndex { >{\SplitList{;}}m } {\ProcessList{#1}{\placeindex}}
+\ProvideDocumentCommand \PeopleIndex { >{\SplitList{;}}m } {\ProcessList{#1}{\peopleindex}}
+\ProvideDocumentCommand \LanguageIndex { >{\SplitList{;}}m } {\ProcessList{#1}{\languageindex}}
+\ProvideDocumentCommand \ResearchIndex { >{\SplitList{;}}m } {\ProcessList{#1}{\researchindex}}
+
+%%%%
+%%%% Index entry commands.
+%%%%
+
+%% Terminology definitions.
+%%
+%% This prints a newly defined term in small capitals and adds it to the index.
+%% The optional argument can contain alternative index entries to replace the term.
+%%
+%% Usage:
+%%   We argue that \term[index entry; entry!index]{index entries} are defined as …
+
+%% The user interface.
+%% This has to be \Declare rather than \Provide because I have defined \term
+%% elsewhere and that definition will conflict with this one.
+\DeclareDocumentCommand \term { >{\SplitList{;}}o m }
+	{\IfNoValueOrEmptyTF{#1}
+		{\subjectindexp{#2}\termformat{#2}}
+		{\ProcessList{#1}{\subjectindexp}\termformat{#2}}}
+
+%% The formatting command.
+\ProvideDocumentCommand \termformat { m } {\textsc{#1}}
+
+
+%% Place name mentions.
+%%
+%% This prints a place name and adds it to the index. The optional argument
+%% contains a list of other names to add to the index.
+
+%% The user interface.
+\ProvideDocumentCommand \placename { >{\SplitList{;}}o m }
+	{\IfNoValueOrEmptyTF{#1}
+		{\languageindex{#2}\placenameformat{#2}}
+		{\ProcessList{#1}{\placeindex}\placenameformat{#2}}}
+
+%% The formatting command.
+\ProvideDocumentCommand \placenameformat { m } {#1}
+
+
+%% Language name mentions.
+%%
+%% This prints a language name and adds it to the index. The optional argument
+%% contains a list of language names to add to the index.
+%%
+%% Usage:
+%%  The \langname[Dakelh; Carrier]{Dakelh} language also exhibits…
+
+%% The user interface.
+\ProvideDocumentCommand \langname { >{\SplitList{;}}o m }
+	{\IfNoValueOrEmptyTF{#1}
+		{\languageindex{#2}\langformat{#2}}
+		{\ProcessList{#1}{\languageindex}\langformat{#2}}}
+
+%% The formatting command.
+\ProvideDocumentCommand \langformat { m } {#1}
+
+
+
+%% Personal name (people) mentions.
+%%
+%%   arg 1: star; wraps everything in parentheses
+%%     useful when used as a citation in an example
+%%   arg 2: optional Tlingit name
+%%   arg 3: first name
+%%   arg 4: optional abbreviation to print for first name
+%%   arg 4: last name
+%
+%% If the star is present then the whole thing is printed in parentheses.
+%% The optional argument is a Tlingit name which is entered separately
+%% into the index as well as included in the other index entry.
+\ProvideDocumentCommand \personname { s d() m d() m }
+	{\IfBooleanTF{#1}{(}{}%
+	\IfNoValueOrEmptyTF{#2}{}{\textit{#2}\PeopleIndex{#2}\space}%	Tlingit name
+	\IfNoValueOrEmptyTF{#4}{#3}{#4}\space%	first name
+	#5%	last name
+	\PeopleIndex{#5, #3\IfNoValueOrEmptyTF{#2}{}{ \textit{#2}}}%	index with optional Tlingit name
+	\IfBooleanTF{#1}{)}{}}
+
+%% Tlingit-only personal name.
+%%
+%% A simpler macro for Tlingit-only names, e.g. from Swanton.
+\ProvideDocumentCommand \tlingitname { s m }
+	{\IfBooleanTF{#1}{#2}{\fm{#2}}\PeopleIndex{#2}}
+
+%% Clan name.
+%%
+%% A special macro that includes “(clan)” in the index entry.
+%%
+%% arg 1: star, wraps everything in parentheses
+%% arg 2: clan name
+\ProvideDocumentCommand \clanname { s m }
+	{\IfBooleanTF{#1}{(}{}%
+	\fm{#2}%
+	\PeopleIndex{#2 (clan)}%
+	\IfBooleanTF{#1}{)}{}}
+
+
+%%%%
+%%%% Index formatting.
+%%%%
+
+%% Highlight command to indicate primary reference for index entry.
+\ProvideDocumentCommand \indexprimary { m } {\textbf{#1}}

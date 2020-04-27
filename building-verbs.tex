@@ -1,0 +1,163 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% The stuff above is for apps like TeXShop and TeXWorks.
+
+%%%%%%
+%%%%%%
+%%%%%% Initialization.
+%%%%%%
+%%%%%%
+
+%% Unicode normalization of input text.
+%%
+%%  0: no normalization (default)
+%%  1: normalize to NFC
+%%  2: normalize to NFD
+%%
+%% You almost always want NFC (1) because otherwise diacritics
+%% get decomposed even in macro names. This causes TeX to puke.
+%% Because OSes have different practices, it's better to choose this
+%% explicitly rather than rely on a possibly unknown default.
+%%
+%% This must be done first because everything else is affected by it.
+\XeTeXinputnormalization 1
+
+%% File prefix.
+%% This is the unchanging part of all file names for this document.
+\def \FILEPREFIX {building-verbs}
+
+%% The Memoir class.
+%% The manual is called 'memman.pdf'.
+\documentclass[12pt,letterpaper,oneside,openright,final]{memoir}
+
+%% LaTeX3 command parsing.
+%% Should be used by all modern, right thinking LaTeX programmers.
+\usepackage{xparse}
+
+%% The amsmath package needs to be loaded very early to avoid
+%% package conflicts.
+\usepackage{amsmath}
+
+%%%%%%
+%%%%%%
+%%%%%% Configuration.
+%%%%%%
+%%%%%%
+
+%%%%
+%%%% Font configuration.
+%%%%
+
+%%%% Basic font configuration. This loads fontspec.
+\input{config/\FILEPREFIX-cfg-fonts-basic}
+
+%%%% Font configuration for special symbols.
+\input{config/\FILEPREFIX-cfg-fonts-symbols}
+
+%%%%
+%%%% Packages.
+%%%%
+
+%% Example formatting with ExPex.
+\input{config/\FILEPREFIX-cfg-packages-expex}
+
+%% Indexing packages and macros.
+%% This must be loaded before BibLaTeX.
+%\input{config/\FILEPREFIX-cfg-packages-index}
+
+%% Bibliography with BibLaTeX.
+\input{config/\FILEPREFIX-cfg-packages-bib}
+
+%% Other packages.
+\input{config/\FILEPREFIX-cfg-packages-other}
+
+%% Hyperlinks and their kin.
+%% This should be loaded after other packages.
+\input{config/\FILEPREFIX-cfg-packages-hyper}
+
+%%%%
+%%%% Memoir configuration and page layout.
+%%%%
+
+\input{config/\FILEPREFIX-cfg-memoir}
+
+%%%%
+%%%% Miscellaneous macrology.
+%%%%
+
+\input{config/\FILEPREFIX-cfg-macrology}
+
+%%%%
+%%%% Hy-ph-en-a-tion.
+%%%%
+
+%% This is the easiest way to provide special hyphenation breaks.
+%% The hard way is to modify TeX’s hyphenation tables.
+\hyphenation{sha-m-an}
+
+%%%%%%
+%%%%%%
+%%%%%% Document body.
+%%%%%%
+%%%%%%
+
+%% Which bits to include.
+%%
+%% Leave everything commented out to get the whole kit and kaboodle.
+
+%\includeonly{chapters/\FILEPREFIX-000-introduction,backmatter/\FILEPREFIX-Z1-bibliography}
+%\includeonly{chapters/\FILEPREFIX-001-root+stem,backmatter/\FILEPREFIX-Z1-bibliography}
+%\includeonly{chapters/\FILEPREFIX-002-arg+val,backmatter/\FILEPREFIX-Z1-bibliography}
+%\includeonly{chapters/\FILEPREFIX-003-arg-add,backmatter/\FILEPREFIX-Z1-bibliography}
+%\includeonly{chapters/\FILEPREFIX-004-arg-sup,backmatter/\FILEPREFIX-Z1-bibliography}
+%\includeonly{chapters/\FILEPREFIX-005-asp,backmatter/\FILEPREFIX-Z1-bibliography}
+%\includeonly{chapters/\FILEPREFIX-006-conj,backmatter/\FILEPREFIX-Z1-bibliography}
+%\includeonly{chapters/\FILEPREFIX-007-stemvar,backmatter/\FILEPREFIX-Z1-bibliography}
+
+\begin{document}
+
+%%%%
+%%%% Frontmatter: Stuff at the beginning.
+%%%%
+\frontmatter
+
+%% These use \input so that they are always included, ignoring \includeonly.
+\input{frontmatter/\FILEPREFIX-A1-titlepage}
+\input{frontmatter/\FILEPREFIX-A2-contents}
+\input{frontmatter/\FILEPREFIX-A3-abbreviations}
+
+%%%%
+%%%% Mainmatter: The body.
+%%%%
+\mainmatter
+\pagestyle{mine}
+% This fixes an apparent bug in titletoc where it doesn't work right with \includeonly.
+\startcontents[chapters]
+\stopcontents[chapters]
+
+%% Chapters.
+\include{chapters/\FILEPREFIX-000-introduction}
+\include{chapters/\FILEPREFIX-001-root+stem}
+\include{chapters/\FILEPREFIX-002-args}
+\include{chapters/\FILEPREFIX-003-argstr}
+\include{chapters/\FILEPREFIX-004-rootval}
+\include{chapters/\FILEPREFIX-005-arg-add}
+\include{chapters/\FILEPREFIX-006-arg-supp}
+\include{chapters/\FILEPREFIX-007-asp}
+\include{chapters/\FILEPREFIX-008-conj}
+\include{chapters/\FILEPREFIX-009-stemvar}
+
+%% Appendices.
+%\appendix
+
+%%%%
+%%%% Backmatter: Stuff at the end.
+%%%%
+\backmatter
+
+\include{backmatter/\FILEPREFIX-Z1-bibliography}
+\include{backmatter/\FILEPREFIX-Z2-indices}
+%%%% The \input forces inclusion regardless of \includeonly. 
+\input{backmatter/\FILEPREFIX-Z3-colophon}
+
+\end{document}
