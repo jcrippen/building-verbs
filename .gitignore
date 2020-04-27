@@ -272,3 +272,6 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# Don't include this for now.
+building-verbs.pdf
