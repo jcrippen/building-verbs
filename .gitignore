@@ -35,6 +35,8 @@
 
 ## Build tool auxiliary files:
 *.fdb_latexmk
+\ex\label{ex:92-63-gone-up-off-saw-deermouse-on-log}%
+\exmn{282.9}%
 *.synctex
 *.synctex(busy)
 *.synctex.gz
@@ -272,6 +274,9 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# ignore all draft files
+drafts/*
 
 # Don't include this for now.
 building-verbs.pdf
